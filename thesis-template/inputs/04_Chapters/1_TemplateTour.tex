@@ -2,7 +2,7 @@
 \label{chapter:template_tour}
 
 
-This template is intended for use in Master's Theses at \textit{Instituto Superior Técnico}, and is in accordance with the guidelines in the \textit{Guia de Preparação da Dissertação 2015/16} (the most recent at time of writing). The current version is an adaptation of the templates developed and used by former MEFT students Pedro Cosme, Diogo Ribeiro, and André Cordeiro. André Cordeiro is responsible for the most recent changes to this version, especially with regards to the \textit{List of Symbols}, the disposition of the Sample Chapter 2, and the configuration of the \textit{Bibliography} (mainly the hyperlinks).
+This template is intended for use in Master's Theses at \textit{Instituto Superior Técnico}, and is in accordance with the guidelines in the \textit{Guia de Preparação da Dissertação 2015/16} (the most recent at time of writing). The current version is an adaptation of the templates developed and used by former MEFT students Pedro Cosme, Diogo Ribeiro, and André Cordeiro. André Cordeiro is responsible for the most recent changes to this version, especially with regards to the \textit{List of Symbols}, the disposition of the ``Sample Chapter'' \ref{chapter:SampleChapter}, and the configuration of the \textit{Bibliography} (mainly the hyperlinks).
 
 The remainder of this chapter contains a description of the project structure, along with some noteworthy commands that may be edited to taste. Nonetheless, the user should read the configuration files (or \texttt{Ctrl + F} through them), in order to fine tune this template.
 
@@ -20,7 +20,7 @@ The \texttt{/config} folder contains two configuration files that should be edit
 \item \texttt{thesis\_preamble.tex} -- Contains all packages required by the template as well as some useful ones for writing mathematical expressions, defining tables and including figures. It also contains the commands for setting up the thesis geometry and looks.
 
 \begin{itemize}
-	\item \Verb*|\usepackage[labelfont=bf,font=small]{caption}| is used to set the ``\textbf{Figure X.Y:}'' to be in bold. Same is done for subcaptions.
+	\item \Verb*|\usepackage[labelfont=bf,font=small]{caption}| is used to set the ``\textbf{Figure X.Y:}'' to be in boldface. Same is done for subcaptions.
 	\item \Verb*|\usepackage{cmbright}| and \Verb*|\newcommand{\fontnamestring}{cmbr}| are done to set the font to Computer Modern Bright for both math mode and normal text.
 	\item \Verb*|\DeclareMathSizes{<tfs>}{<ts>}{<ss>}{<sss>}| is called to set the size of math mode, both in equations and inline. The arguments are respectively the size of surrounding text, the size for math mode, the size of subscripts, and the size of subsubscripts. It must be called twice, with \verb+<tfs>+ larger and smaller than the font size used in the document.
 	\item \Verb*|\hypersetup| is called to set the options for hyperlinks inside the document (this includes e.g. the colour of references).
@@ -29,7 +29,7 @@ The \texttt{/config} folder contains two configuration files that should be edit
 \end{itemize}
 
 
-\item \texttt{my\_commands.tex} -- Contains used defined commands. I have some packages used for this template, as well as some commands pertaining to typesetting subscripts and superscripts.
+\item \texttt{my\_commands.tex} -- Contains user defined commands. I have some packages used for this template, as well as some commands pertaining to typesetting subscripts and superscripts.
 \end{itemize}
 
 \subsection{The {\normalfont\texttt{/input}} folder} %\normalfont to avoid a warning
@@ -41,9 +41,9 @@ After the document is configured, the actual writing can begin. In the \texttt{/
 
 \item \texttt{/02\_Front\_Matter} -- The Front Matter of a thesis is composed of the \textit{Dedication}, \textit{Acknowledgements}, \textit{Abstract} and \textit{Resumo} files. In the \textit{Dedication} file you may dedicate the thesis to someone or write a quote. The \textit{Acknowledgements} page allow you to acknowledge a funding grant, some organisation, or people whose importance to you and your work should be mentioned. The \textit{Abstract} and \textit{Resumo} pages should be essentially the same (albeit in different languages) and should contain a brief summary of your work. Since the character limit is identical for both languages, it may be useful to have slightly different texts in the \textit{Abstract} and \textit{Resumo} chapters.
 
-\item \texttt{/03\_Glossary\_and\_Nomenclature} -- The \textit{List of Abbreviations}/\textit{Glossary} pages should contain important acronyms that you use throughout the thesis. You may also include mathematical symbols to form a \textit{List of Symbols}/\textit{Nomenclature} page. Special care must be taken when compiling these sections, as described below.
+\item \texttt{/03\_Glossary\_and\_Nomenclature} -- The \textit{List of Abbreviations}/\textit{Glossary} pages should contain important acronyms that you use throughout the thesis. You may also include mathematical symbols to form a \textit{List of Symbols}/\textit{Nomenclature} page, although this is not mandatory. Special care must be taken when compiling these sections, as described below.
 
-\item \texttt{/04\_Chapters} -- The main writing happens inside this folder. Here you should create a separate file for each chapter. Chapter files may start in the following manner
+\item \texttt{/04\_Chapters} -- Most writing happens inside this folder. Here you should create a separate file for each chapter. Chapter files may start in the following manner
 
 \begin{verbatim}
 \chapter{Chapter name}
@@ -62,7 +62,7 @@ All graphics to be included in the main document should be placed inside this fo
 
 \subsection{The {\normalfont\texttt{/bib}} folder} %\normalfont to avoid a warning
 
-Finally, the bibliography is handled by the \texttt{/bib} folder. Inside you will find the bibliography \texttt{my\_ref.bib} file where all the references should be placed. The bibliography entries may have a format similar to:
+Finally, the bibliography is handled by the \texttt{/bib} folder. Inside you will find the bibliography file \texttt{my\_ref.bib} where all the references should be placed. The bibliography entries may have a format similar to:
 
 \begin{verbatim}
 @article{Einstein:1905,
@@ -84,12 +84,12 @@ As a final note, in the \textit{Bibliography}, the title will also be an hyperli
 %----------------------------------
 \section{Useful links}
 %
-To take the biggest advantage possible of this template it is useful to know the ins and outs of \LaTeX. This usually takes time, but it is not a daunting task. For a start, the \href{https://www.overleaf.com/learn}{Overleaf website} contains some straightforward tutorials on how to edit \LaTeX files. After the basics, \href{https://tex.stackexchange.com}{the \LaTeX\, stackexchange} can help you with more specific problems -- there is almost always someone with a similar problem!
+To take the biggest advantage possible of this template it is useful to know the ins and outs of \LaTeX. This usually takes time, but it is not a daunting task. For a start, the \href{https://www.overleaf.com/learn}{Overleaf website} contains some straightforward tutorials on how to edit \LaTeX\, files. After the basics, \href{https://tex.stackexchange.com}{the \LaTeX\, stackexchange} can help you with more specific problems -- there is almost always someone with a similar problem!
 
 %----------------------------------
 \section{How to compile this template}
 
-When making changes to the \textit{List of Abbreviations}, one must recreate some auxiliary files order for the changes to take effect.
+When making changes to the \textit{List of Abbreviations}, \textit{List of Symbols}, or the \textit{Bibliography}, one must recreate some auxiliary files in order for the changes to take effect.
 
 \subsection{TeXstudio}
 
@@ -109,7 +109,7 @@ For the \textit{Bibliography}, the same procedure is required. This is also true
 	makeindex %.nlo -s nomencl.ist -o %.nls
 \end{verbatim}
 
-\noindent on Windows and Linux systems respectively. The command to build the auxiliary files for the nomenclature can be found in \textit{Tools}, named \textit{Index} (you can defined a hotkey in \textit{Configure TeXstudio}).
+\noindent on Windows and Linux systems respectively. The command to build the auxiliary files for the nomenclature can be found in \textit{Tools}, named \textit{Index} (you can define a hotkey in \textit{Configure TeXstudio}).
 
 \subsection{Overleaf}
 

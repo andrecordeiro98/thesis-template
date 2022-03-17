@@ -101,23 +101,24 @@ pdftitle={Thesis Title},%
 \null\newpage
 %\null\newpage
 
-%Nomenclature
+% Nomenclature
 \renewcommand{\nomname}{List of Symbols}
 \input{thesis-template/inputs/03_Glossary_and_Nomenclature/Thesis_Nomenclature}
 \phantomsection
 \addcontentsline{toc}{chapter}{\nomname}
 \printnomenclature
-\null\newpage
+%\null\newpage
 
 %Glossary
 \renewcommand{\glossaryname}{List of Abbreviations}
 \input{thesis-template/inputs/03_Glossary_and_Nomenclature/Thesis_Glossary} 
-
-\phantomsection                                     %For correct hyperlink
+% For correct hyperlink
+\phantomsection
 \addcontentsline{toc}{chapter}{\glossaryname}
 
-\printglossary[type=\acronymtype, title=\glossaryname]   %To print the acronyms
 \glsaddall
+\printglossary[type=\acronymtype, title=\glossaryname]   %To print the acronyms
+
 \null\newpage\null\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
