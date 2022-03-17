@@ -3,8 +3,8 @@
 \nomgroup{G}
   \item [{$\gamma\upp{\mu}$}]\begingroup Dirac matrix.\nomeqref {0}\nompageref{xii}
   \item [{$\mu,\nu,\sigma$}]\begingroup Spacetime indices.\nomeqref {0}\nompageref{xii}
-  \item [{$\varepsilon(p)$}]\begingroup Spinor for fermions (incoming).\nomeqref {0}\nompageref{xii}
-  \item [{$\varepsilon(p)\upp{*}$}]\begingroup Spinor for fermions (outgoing).\nomeqref {0}\nompageref{xii}
+  \item [{$\varepsilon\sub{\mu}(p)$}]\begingroup Polarisation for gluons (incoming).\nomeqref {0}\nompageref{xii}
+  \item [{$\varepsilon\sub{\mu}(p)\upp{*}$}]\begingroup Polarisation for gluons (outgoing).\nomeqref {0}\nompageref{xii}
 \nomgroup{R}
   \item [{$\mathscr{L}$}]\begingroup Lagrangian, or lagrangian density.\nomeqref {0}\nompageref{xii}
   \item [{$\phantom{}\bar{u}(p)$}]\begingroup Spinor for fermions (outgoing).\nomeqref {0}\nompageref{xii}
