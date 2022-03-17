@@ -41,7 +41,7 @@ After the document is configured, the actual writing can begin. In the \texttt{/
 
 \item \texttt{/02\_Front\_Matter} -- The Front Matter of a thesis is composed of the \textit{Dedication}, \textit{Acknowledgements}, \textit{Abstract} and \textit{Resumo} files. In the \textit{Dedication} file you may dedicate the thesis to someone or write a quote. The \textit{Acknowledgements} page allow you to acknowledge a funding grant, some organisation, or people whose importance to you and your work should be mentioned. The \textit{Abstract} and \textit{Resumo} pages should be essentially the same (albeit in different languages) and should contain a brief summary of your work. Since the character limit is identical for both languages, it may be useful to have slightly different texts in the \textit{Abstract} and \textit{Resumo} chapters.
 
-\item \texttt{/03\_Glossary\_and\_Nomenclature} -- The \textit{List of Abbreviations}/\textit{Glossary} pages should contain important acronyms that you use throughout the thesis. You may also include mathematical symbols to form a \textit{Symbols}/\textit{Nomenclature} page. Special care must be taken when compiling these sections, as described below.
+\item \texttt{/03\_Glossary\_and\_Nomenclature} -- The \textit{List of Abbreviations}/\textit{Glossary} pages should contain important acronyms that you use throughout the thesis. You may also include mathematical symbols to form a \textit{List of Symbols}/\textit{Nomenclature} page. Special care must be taken when compiling these sections, as described below.
 
 \item \texttt{/04\_Chapters} -- The main writing happens inside this folder. Here you should create a separate file for each chapter. Chapter files may start in the following manner
 
@@ -66,12 +66,12 @@ Finally, the bibliography is handled by the \texttt{/bib} folder. Inside you wil
 
 \begin{verbatim}
 @article{Einstein:1905,
-author = "Einstein, Albert",
-title = "{On the electrodynamics of moving bodies}",
-doi = "10.1002/andp.200590006",
-journal = "Annalen Phys.",
-volume = "17",
-year = "1905"
+author = {Einstein, Albert},
+title = {On the electrodynamics of moving bodies},
+doi = {10.1002/andp.200590006},
+journal = {Annalen Phys.},
+volume = {17},
+year = {1905}
 }
 \end{verbatim}
 %
@@ -103,7 +103,7 @@ When making changes to the \textit{List of Abbreviations}, one must recreate som
 
 \noindent Note, if the change involves erasing a line from the \textit{List of Abbreviations}, the last two steps may need to be repeated (keep producing the glossary files and recompiling the project). Besides the hotkeys, these commands can be found in the \textit{Tools} menu in the upper bar.
 
-For the \textit{List of Abbreviations} and the \textit{Bibliography}, the same procedure is needed. This is also true for the \textit{List of Symbols}, with an additional caveat that the compilation command in \textit{Options} $\rightarrow$ \textit{Configure TeXstudio} $\rightarrow$ \textit{Commands} $\rightarrow$ \textit{Make Index} should be changed to one of the following
+For the \textit{Bibliography}, the same procedure is required. This is also true for the \textit{List of Symbols}, with an additional caveat that the compilation command in \textit{Options} $\rightarrow$ \textit{Configure TeXstudio} $\rightarrow$ \textit{Commands} $\rightarrow$ \textit{Make Index} should be changed to one of the following
 \begin{verbatim}
 	makeindex.exe %.nlo -s nomencl.ist -o %.nls
 	makeindex %.nlo -s nomencl.ist -o %.nls

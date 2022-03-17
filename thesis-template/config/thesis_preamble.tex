@@ -17,8 +17,8 @@
 %Figures and captions
 \usepackage{graphicx}					% More complex version of graphics for figures
 %\usepackage{caption}					% More control over captions
-\usepackage[labelfont=bf,font=small]{caption}      % More control over captions (and boldface "Figure 1.1." text)
-\usepackage[labelfont=bf,font=small]{subcaption}   % Same, for subcaptions
+\usepackage[labelfont=bf,font=small]{caption}		% More control over captions (and boldface "Figure 1.1." text)
+\usepackage[labelfont=bf,font=small]{subcaption}	% Same, for subcaptions
 \usepackage{sidecap}					% Side captions (just in case)
 
 \pdfsuppresswarningpagegroup=1			% This just suppresses an annoying (and meaningless) warning
@@ -144,6 +144,37 @@
 \DeclareMathAlphabet\mathscr{LS1}{stixscr}{m}{n}
 \SetMathAlphabet\mathscr{bold}{LS1}{stixscr}{b}{n}
 %--------------------------
+
+
+%--------------------------
+% Small bold for CMBright
+
+\DeclareFontFamily{OT1}{cmbr}{\hyphenchar\font45 }
+\DeclareFontShape{OT1}{cmbr}{m}{n}{%
+	<-9>cmbr8
+	<9-10>cmbr9
+	<10-17>cmbr10
+	<17->cmbr17
+}{}
+\DeclareFontShape{OT1}{cmbr}{m}{sl}{%
+	<-9>cmbrsl8
+	<9-10>cmbrsl9
+	<10-17>cmbrsl10
+	<17->cmbrsl17
+}{}
+\DeclareFontShape{OT1}{cmbr}{m}{it}{%
+	<->ssub*cmbr/m/sl
+}{}
+\DeclareFontShape{OT1}{cmbr}{b}{n}{%
+	<->ssub*cmbr/bx/n
+}{}
+\DeclareFontShape{OT1}{cmbr}{bx}{n}{%
+	<->cmbrbx10
+}{}
+
+%--------------------------
+
+
 
 
 %------------------------
@@ -275,8 +306,8 @@
 
 %ALWAYS specify the full path. Also, \bibliography is apparently deprecated, favouring \addbibresource
 %HOWEVER, both work (!) (in Overleaf, that is)
-%\bibliography{Thesis_Template/bib/my_ref} 
-\addbibresource{Thesis_Template/bib/my_ref.bib}
+%\bibliography{thesis-template/bib/my_ref} 
+\addbibresource{thesis-template/bib/my_ref.bib}
 %%%%%%%
 % NOTE
 % To get this to work on TeXStudio, do: 

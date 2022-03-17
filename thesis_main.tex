@@ -4,12 +4,12 @@
 \newcommand{\mycomment}[1]{} %Multi-line comment
 
 %Configuration document
-\input{Thesis_Template/config/thesis_preamble}
+\input{thesis-template/config/thesis_preamble}
 
 %----------------------------------
 %------------ COMMANDS ------------
 %----------------------------------
-\input{Thesis_Template/config/my_commands.tex}
+\input{thesis-template/config/my_commands.tex}
 
 %Setup the document title (file properties)
 \hypersetup{%
@@ -36,17 +36,17 @@ pdftitle={Thesis Title},%
 % ----------------------------------------------------------------------
 
 %Cover page
-\input{Thesis_Template/inputs/01_Cover_Page/thesis_front_cover}
+\input{thesis-template/inputs/01_Cover_Page/thesis_front_cover}
 \null\newpage
 \null\newpage
 
 %Dedication page
-\input{Thesis_Template/inputs/02_Front_Matter/Dedication} 
+\input{thesis-template/inputs/02_Front_Matter/Dedication} 
 %\cleardoublepage
 \null\newpage
 
 %Acknowledgments page
-\input{Thesis_Template/inputs/02_Front_Matter/Acknowledgements}
+\input{thesis-template/inputs/02_Front_Matter/Acknowledgements}
 %\cleardoublepage
 \null\newpage
 
@@ -55,12 +55,12 @@ pdftitle={Thesis Title},%
 % ----------------------------------------------------------------------
 
 %Mother language
-\input{Thesis_Template/inputs/02_Front_Matter/Resumo}   
+\input{thesis-template/inputs/02_Front_Matter/Resumo}   
 %\cleardoublepage
 \null\newpage
 
 %English
-\input{Thesis_Template/inputs/02_Front_Matter/Abstract} 
+\input{thesis-template/inputs/02_Front_Matter/Abstract} 
 %\cleardoublepage
 \null\newpage
 
@@ -103,7 +103,7 @@ pdftitle={Thesis Title},%
 
 %Nomenclature
 \renewcommand{\nomname}{List of Symbols}
-\input{Thesis_Template/inputs/03_Glossary_and_Nomenclature/Thesis_Nomenclature}
+\input{thesis-template/inputs/03_Glossary_and_Nomenclature/Thesis_Nomenclature}
 \phantomsection
 \addcontentsline{toc}{chapter}{\nomname}
 \printnomenclature
@@ -111,7 +111,7 @@ pdftitle={Thesis Title},%
 
 %Glossary
 \renewcommand{\glossaryname}{List of Abbreviations}
-\input{Thesis_Template/inputs/03_Glossary_and_Nomenclature/Thesis_Glossary} 
+\input{thesis-template/inputs/03_Glossary_and_Nomenclature/Thesis_Glossary} 
 
 \phantomsection                                     %For correct hyperlink
 \addcontentsline{toc}{chapter}{\glossaryname}
@@ -131,11 +131,11 @@ pdftitle={Thesis Title},%
 %  Chapters
 % ----------------------------------------------------------------------
 
-\input{Thesis_Template/inputs/04_Chapters/1_TemplateTour}
+\input{thesis-template/inputs/04_Chapters/1_TemplateTour}
 \null\newpage
 %\null\newpage
 
-\input{Thesis_Template/inputs/04_Chapters/2_SampleChapter}
+\input{thesis-template/inputs/04_Chapters/2_SampleChapter}
 \null\newpage
 %\null\newpage
 
@@ -159,7 +159,7 @@ pdftitle={Thesis Title},%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
 
-\input{Thesis_Template/inputs/05_Appendix/A_Appendix}
+\input{thesis-template/inputs/05_Appendix/A_Appendix}
 \null\newpage
 \null\newpage
 
