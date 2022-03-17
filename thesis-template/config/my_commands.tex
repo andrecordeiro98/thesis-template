@@ -1,0 +1,42 @@
+%----------------------------------
+%------------ COMMANDS ------------
+%----------------------------------
+%
+% Here, you can neatly define all your auxilliary commands
+
+%Packages
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyvrb} %Fancy Verbatim (used with \Verb)
+
+
+%Commands
+\newcommand{\ac}[1]{\textcolor{MidnightBlue}{#1}} %Andre's comments.
+\newcommand{\orange}[1]{\textcolor{Bittersweet}{#1}} %Orange comments.
+\newcommand{\green}[1]{\textcolor{OliveGreen}{#1}} %Green comments.
+
+%\newcommand{\mycomment}[1]{} %Multi-line comment
+
+\newcommand{\sub}[1]{_{#1}^{}} %Subscripts with proper height
+\newcommand{\upp}[1]{_{}^{#1}} %Superscripts with proper height
+\newcommand{\ind}[2]{^{#1}_{#2}} %Both
+
+\newcommand{\expo}{{\rm e}} %exp
+\newcommand{\im}{{\rm i}} %imaginary unit
+
+\newcommand{\diff}{{\rm d}} %differential
+
+%--------
+
+%Slashed with subscript
+\newcommand{\slashedsub}[2]{\slashed{#1}\sub{\hspace{-.05cm}#2}}
+
+
+%definitions
+%\newcommand\myeq{\mathrel{\stackrel{\makebox[0pt]{\mbox{\normalfont\tiny $\int $}}}{=}}}
+\newcommand\mydef{
+	\mathrel{\stackrel{\makebox[0pt]{\mbox{\normalfont\tiny \textrm{ def} }}}{=}}
+}
+
+\newcommand\equalenforce{
+	\mathrel{\stackrel{\makebox[0pt]{\mbox{\normalfont\scriptsize \textrm{ !} }}}{=}}
+}

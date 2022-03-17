@@ -1,0 +1,167 @@
+\documentclass[10pt,a4paper,twoside]{report}
+
+% Just because this is useful
+\newcommand{\mycomment}[1]{} %Multi-line comment
+
+%Configuration document
+\input{Thesis_Template/config/thesis_preamble}
+
+%----------------------------------
+%------------ COMMANDS ------------
+%----------------------------------
+\input{Thesis_Template/config/my_commands.tex}
+
+%Setup the document title (file properties)
+\hypersetup{%
+pdftitle={Thesis Title},%
+}
+
+
+%-----------------------------------
+%-----------------------------------
+%-----------------------------------
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FRONT MATTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{plain}
+\pagenumbering{roman}
+
+% ----------------------------------------------------------------------
+%  Cover , Dedication and Acknowledgements pages
+% ----------------------------------------------------------------------
+
+%Cover page
+\input{Thesis_Template/inputs/01_Cover_Page/thesis_front_cover}
+\null\newpage
+\null\newpage
+
+%Dedication page
+\input{Thesis_Template/inputs/02_Front_Matter/Dedication} 
+%\cleardoublepage
+\null\newpage
+
+%Acknowledgments page
+\input{Thesis_Template/inputs/02_Front_Matter/Acknowledgements}
+%\cleardoublepage
+\null\newpage
+
+% ----------------------------------------------------------------------
+%  %Abstract in mother language and English
+% ----------------------------------------------------------------------
+
+%Mother language
+\input{Thesis_Template/inputs/02_Front_Matter/Resumo}   
+%\cleardoublepage
+\null\newpage
+
+%English
+\input{Thesis_Template/inputs/02_Front_Matter/Abstract} 
+%\cleardoublepage
+\null\newpage
+
+
+% ----------------------------------------------------------------------
+%  Table of contents, list of tables, list of figures and nomenclature
+% ----------------------------------------------------------------------
+
+% NOTE: Change chapter -> section in \addcontentsline{toc}{<section/chapter>}
+%		to determine whether is shows up as a chapter (bold) or a section (indented)
+
+%Table of contents
+\phantomsection
+\renewcommand{\contentsname}{Table of Contents}
+\addcontentsline{toc}{chapter}{\contentsname}
+{\hypersetup{linkcolor=black}% Set these links to black
+\tableofcontents%
+}
+\null\newpage
+%\null\newpage
+
+%List of tables
+\phantomsection
+%\addcontentsline{toc}{section}{\listtablename}
+\addcontentsline{toc}{chapter}{\listtablename}
+{\hypersetup{linkcolor=black}% Set these links to black
+\listoftables%
+}
+\null\newpage
+%\null\newpage
+
+%List of figures
+\phantomsection
+\addcontentsline{toc}{chapter}{\listfigurename}
+{\hypersetup{linkcolor=black}% Set these links to black
+\listoffigures%
+}
+\null\newpage
+%\null\newpage
+
+%Nomenclature
+\renewcommand{\nomname}{List of Symbols}
+\input{Thesis_Template/inputs/03_Glossary_and_Nomenclature/Thesis_Nomenclature}
+\phantomsection
+\addcontentsline{toc}{chapter}{\nomname}
+\printnomenclature
+\null\newpage
+
+%Glossary
+\renewcommand{\glossaryname}{List of Abbreviations}
+\input{Thesis_Template/inputs/03_Glossary_and_Nomenclature/Thesis_Glossary} 
+
+\phantomsection                                     %For correct hyperlink
+\addcontentsline{toc}{chapter}{\glossaryname}
+
+\printglossary[type=\acronymtype, title=\glossaryname]   %To print the acronyms
+\glsaddall
+\null\newpage\null\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MAIN MATTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+% ----------------------------------------------------------------------
+%  Chapters
+% ----------------------------------------------------------------------
+
+\input{Thesis_Template/inputs/04_Chapters/1_TemplateTour}
+\null\newpage
+%\null\newpage
+
+\input{Thesis_Template/inputs/04_Chapters/2_SampleChapter}
+\null\newpage
+%\null\newpage
+
+
+
+
+% ----------------------------------------------------------------------
+%  Bibliography
+% ----------------------------------------------------------------------
+
+\phantomsection
+\addcontentsline{toc}{chapter}{\bibname}
+
+%\nocite{*}
+
+\printbibliography
+\null\newpage\null\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AFTER MATTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+
+\input{Thesis_Template/inputs/05_Appendix/A_Appendix}
+\null\newpage
+\null\newpage
+
+
+\end{document}

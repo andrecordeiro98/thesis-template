@@ -1,0 +1,120 @@
+\chapter{A Tour of the Template}
+\label{chapter:template_tour}
+
+
+This template is intended for use in Master's Theses at \textit{Instituto Superior Técnico}, and is in accordance with the guidelines in the \textit{Guia de Preparação da Dissertação 2015/16} (the most recent at time of writing). The current version is an adaptation of the templates developed and used by former MEFT students Pedro Cosme, Diogo Ribeiro, and André Cordeiro. André Cordeiro is responsible for the most recent changes to this version, especially with regards to the \textit{List of Symbols}, the disposition of the Sample Chapter 2, and the configuration of the \textit{Bibliography} (mainly the hyperlinks).
+
+The remainder of this chapter contains a description of the project structure, along with some noteworthy commands that may be edited to taste. Nonetheless, the user should read the configuration files (or \texttt{Ctrl + F} through them), in order to fine tune this template.
+
+
+%----------------------------------
+\section{Document structure}
+
+This thesis template is separated into several files for easy editing. The \texttt{main.tex} file serves as the base document from where all other files are inserted. In the main folder you can find 4 separate folders.
+
+\subsection{The {\normalfont\texttt{/config}} folder} %\normalfont to avoid a warning
+
+The \texttt{/config} folder contains two configuration files that should be edited with care:
+%
+\begin{itemize}
+\item \texttt{thesis\_preamble.tex} -- Contains all packages required by the template as well as some useful ones for writing mathematical expressions, defining tables and including figures. It also contains the commands for setting up the thesis geometry and looks.
+
+\begin{itemize}
+	\item \Verb*|\usepackage[labelfont=bf,font=small]{caption}| is used to set the ``\textbf{Figure X.Y:}'' to be in bold. Same is done for subcaptions.
+	\item \Verb*|\usepackage{cmbright}| and \Verb*|\newcommand{\fontnamestring}{cmbr}| are done to set the font to Computer Modern Bright for both math mode and normal text.
+	\item \Verb*|\DeclareMathSizes{<tfs>}{<ts>}{<ss>}{<sss>}| is called to set the size of math mode, both in equations and inline. The arguments are respectively the size of surrounding text, the size for math mode, the size of subscripts, and the size of subsubscripts. It must be called twice, with \verb+<tfs>+ larger and smaller than the font size used in the document.
+	\item \Verb*|\hypersetup| is called to set the options for hyperlinks inside the document (this includes e.g. the colour of references).
+	\item \Verb*|\captionsetup{width=.85\textwidth}| is called to define the width of captions.
+	\item \Verb*|\usepackage[<options>]{biblatex}| is called to configure the bibliography. Check these options carefully, reading the comments to each portion of the code.
+\end{itemize}
+
+
+\item \texttt{my\_commands.tex} -- Contains used defined commands. I have some packages used for this template, as well as some commands pertaining to typesetting subscripts and superscripts.
+\end{itemize}
+
+\subsection{The {\normalfont\texttt{/input}} folder} %\normalfont to avoid a warning
+
+After the document is configured, the actual writing can begin. In the \texttt{/input} folder you will find several folders with several documents inside:
+
+\begin{itemize}
+\item \texttt{/01\_Cover\_Page} -- A cover according to \textit{IST} regulations. The names of the author, supervisors, and committee members must be added, as well as the name of the degree. You can also choose a cover image.
+
+\item \texttt{/02\_Front\_Matter} -- The Front Matter of a thesis is composed of the \textit{Dedication}, \textit{Acknowledgements}, \textit{Abstract} and \textit{Resumo} files. In the \textit{Dedication} file you may dedicate the thesis to someone or write a quote. The \textit{Acknowledgements} page allow you to acknowledge a funding grant, some organisation, or people whose importance to you and your work should be mentioned. The \textit{Abstract} and \textit{Resumo} pages should be essentially the same (albeit in different languages) and should contain a brief summary of your work. Since the character limit is identical for both languages, it may be useful to have slightly different texts in the \textit{Abstract} and \textit{Resumo} chapters.
+
+\item \texttt{/03\_Glossary\_and\_Nomenclature} -- The \textit{List of Abbreviations}/\textit{Glossary} pages should contain important acronyms that you use throughout the thesis. You may also include mathematical symbols to form a \textit{Symbols}/\textit{Nomenclature} page. Special care must be taken when compiling these sections, as described below.
+
+\item \texttt{/04\_Chapters} -- The main writing happens inside this folder. Here you should create a separate file for each chapter. Chapter files may start in the following manner
+
+\begin{verbatim}
+\chapter{Chapter name}
+\label{chapter:chapter_name}
+\end{verbatim}
+
+
+\noindent as to allow you to refer to the chapter further down the writing.
+
+\item \texttt{/05\_Appendix} -- The appendix folder works in the same fashion as the chapter folder. Separate files for each appendix should be created and edited.
+\end{itemize}
+
+\subsection{The {\normalfont\texttt{/figures}} folder} %\normalfont to avoid a warning
+%
+All graphics to be included in the main document should be placed inside this folder. We recommend separating the files to be included in separate folders according to the chapter they are to be placed in. The second chapter of this template contains some examples of how to incorporate the graphics in the main text.
+
+\subsection{The {\normalfont\texttt{/bib}} folder} %\normalfont to avoid a warning
+
+Finally, the bibliography is handled by the \texttt{/bib} folder. Inside you will find the bibliography \texttt{my\_ref.bib} file where all the references should be placed. The bibliography entries may have a format similar to:
+
+\begin{verbatim}
+@article{Einstein:1905,
+author = "Einstein, Albert",
+title = "{On the electrodynamics of moving bodies}",
+doi = "10.1002/andp.200590006",
+journal = "Annalen Phys.",
+volume = "17",
+year = "1905"
+}
+\end{verbatim}
+%
+and be cited with the \verb|\cite| command as \cite{Einstein:1905}. To cite multiple sources at once, do \cite{FeynCalc:1991,FeynCalc:2016,FeynCalc:2020}. To specify a page in a source, one can say \cite[p.~500]{Dokshitzer:1991} --- in fact, any text can be added after the reference, as \cite[Any text you might want]{Peskin:1995}.
+
+The easiest way to assure consistency with the formatting of each entry is to retrieve them from the same website (\href{https://inspirehep.net/}{InspireHEP}, \href{https://ui.adsabs.harvard.edu/}{NASA/ADS}, ... ).
+
+As a final note, in the \textit{Bibliography}, the title will also be an hyperlink to the URL, DOI, ISBN, or ISSN, \textbf{in that order of priority}. Therefore, if an article has an open-access version, include the URL in the \texttt{.bib} file, and it will be used for the hyperlink.
+
+%----------------------------------
+\section{Useful links}
+%
+To take the biggest advantage possible of this template it is useful to know the ins and outs of \LaTeX. This usually takes time, but it is not a daunting task. For a start, the \href{https://www.overleaf.com/learn}{Overleaf website} contains some straightforward tutorials on how to edit \LaTeX files. After the basics, \href{https://tex.stackexchange.com}{the \LaTeX\, stackexchange} can help you with more specific problems -- there is almost always someone with a similar problem!
+
+%----------------------------------
+\section{How to compile this template}
+
+When making changes to the \textit{List of Abbreviations}, one must recreate some auxiliary files order for the changes to take effect.
+
+\subsection{TeXstudio}
+
+\noindent In \textit{TeXstudio}, this can be achieved by:
+\begin{itemize}
+	\item Altering the glossary;
+	\item Compiling the \texttt{.tex} file [F5];
+	\item Producing the glossary auxiliary files [F9];
+	\item Compiling the \texttt{.tex} file \textbf{again} [F5].
+\end{itemize}
+
+\noindent Note, if the change involves erasing a line from the \textit{List of Abbreviations}, the last two steps may need to be repeated (keep producing the glossary files and recompiling the project). Besides the hotkeys, these commands can be found in the \textit{Tools} menu in the upper bar.
+
+For the \textit{List of Abbreviations} and the \textit{Bibliography}, the same procedure is needed. This is also true for the \textit{List of Symbols}, with an additional caveat that the compilation command in \textit{Options} $\rightarrow$ \textit{Configure TeXstudio} $\rightarrow$ \textit{Commands} $\rightarrow$ \textit{Make Index} should be changed to one of the following
+\begin{verbatim}
+	makeindex.exe %.nlo -s nomencl.ist -o %.nls
+	makeindex %.nlo -s nomencl.ist -o %.nls
+\end{verbatim}
+
+\noindent on Windows and Linux systems respectively. The command to build the auxiliary files for the nomenclature can be found in \textit{Tools}, named \textit{Index} (you can defined a hotkey in \textit{Configure TeXstudio}).
+
+\subsection{Overleaf}
+
+\noindent In \textit{Overleaf}, it is enough to delete the cached files before recompiling the project. This can be done by clicking the \textit{Logs and output files} button (which displays the compilation errors and warnings), followed by the \textit{Trash Can} icon. Note, this is not necessary when deleting or re-adding an element of the glossary, only when making changes.
+
+This behaviour was verified on Overleaf, with the pdfLaTeX compiler, using TeX Live version 2020.
+
+

@@ -1,0 +1,237 @@
+\chapter{A Sample Chapter}
+\label{chapter:SampleChapter}
+
+This chapter contains some examples of equations, figures, and tables with a suggested style.
+
+%\clearpage
+\section{Some Equations}
+
+\subsection{Font Size in Math Mode}
+
+To change the font size of inline math, such as $\sqrt{x\upp{2} + 1}$, $f\sub{p/h}(x, Q\upp{2})$, or $\tau\ind{-1}{\sf form} \propto z \,\theta\upp{2}$, consider the following lines on the file \texttt{thesis\_preamble.tex},
+
+\begin{figure}[h!]
+\centering
+\begin{BVerbatim}
+	\DeclareMathSizes{9}{10}{8}{6}
+	\DeclareMathSizes{10}{10}{8}{6}
+	\DeclareMathSizes{11}{10}{8}{6}
+\end{BVerbatim}
+\end{figure}
+
+
+\noindent where the arguments of \verb+\DeclareMathSizes{<tfs>}{<ts>}{<ss>}{<sss>}+ are respectively, the size of surrounding text, the size for math mode, the size of subscripts, and the size of subsubscripts.
+%
+This command should be called at least twice, with \verb+<tfs>+ larger and smaller than the font size used in the document. 
+
+\subsection{Single Line, Single Label Equation}
+
+\begin{align}
+	\diff \ln \rho\upp{2} \, \diff z
+	\,=\,
+	{\rm det}
+	\begin{bmatrix}
+		\,1 & f'(z) / f(z) \\
+		\,0 & 1
+	\end{bmatrix} 
+	\diff \ln \mu\upp{2} \, \diff z
+	\,=\,
+	\diff \ln \mu\upp{2} \, \diff z
+	\,.
+\end{align}
+
+\subsection{Multiple Line, Single Label Equation}
+
+\begin{align} \begin{split}
+	\mathscr{L}\sub{\textsf{classical}} \,&=\, 
+	\overline{\psi} ( \im \slashed{D} - {\sf M} ) \psi - \frac{1}{4} F\ind{a}{\mu\nu} F\ind{a,\mu\nu}{} \,,
+	\quad\textrm{ with }\quad\\
+	%%%%%%%%%%%%%%%%%%%%%%%%
+	D\sub{\mu} \,&=\, \partial\sub{\mu} \,-\, \im\,g\, \textrm{T}\upp{a} \, A\ind{a}{\mu} \,,\\
+	F\ind{a}{\mu\nu} \,&=\, \partial\sub{\mu} A\ind{a}{\nu} \,-\, \partial\sub{\nu} A\ind{a}{\mu}
+	\,+\, g\, f\upp{abc}\,A\ind{b}{\mu}\,A\ind{c}{\nu}\,.
+\end{split} \end{align}
+
+\subsection{Multiple Line, Multiple Label Equation}
+
+\begin{subequations} \begin{align}
+		\mfrac{1}{(-g)} \mathcal{M}&\sub{\mathcal{B} \rightarrow q\overline{q}g }
+		=
+		\varepsilon\sub{\mu}(k)\upp{*} \,
+		\overline{u}(p\sub{1})
+		\textrm{T}\ind{a}{ij}
+		\bigg(
+		\gamma\upp{\mu}
+		\frac{ \slashed{k} + \slashed{p}\sub{1} + m }{ (p\sub{1} + k)\upp{2} - m\upp{2} }
+		\mathcal{B}
+		\,-\,
+		\mathcal{B}
+		\frac{ \slashed{k} + \slashed{p}\sub{2} - m }{ (p\sub{2} + k)\upp{2} - m\upp{2} }
+		\gamma\upp{\mu}
+		\bigg)
+		v(p\sub{2})
+		\\
+		%----------------------------------------
+		=&\,
+		\overline{u}(p\sub{1})
+		\, \mathcal{B} \,
+		v(p\sub{2}) \,
+		\varepsilon\sub{\mu}(k)\upp{*} \,
+		\bigg(
+		\frac{ p\ind{\mu}{1} }{ p\sub{1}\cdot k }
+		\,-\,
+		\frac{ p\ind{\mu}{2} }{ p\sub{2}\cdot k }
+		\bigg) \textrm{T}\ind{a}{ij}
+		%----
+		+ \overline{u}(p\sub{1})
+		\bigg(
+		\frac{ \slashed{\varepsilon}\upp{*} \, \slashed{k} \, \mathcal{B} }{ 2 \, p\sub{1}\cdot k }
+		\,-\,
+		\frac{ \mathcal{B} \, \slashed{k} \, \slashed{\varepsilon}\upp{*} }{ 2 \, p\sub{2}\cdot k }
+		\bigg)
+		v(p\sub{2})
+		\textrm{T}\ind{a}{ij}
+		\label{eqline:amplitude_antenna}
+		\,.
+\end{align} \label{eq:amplitude_antenna} 
+\end{subequations}
+%
+Here we see equation \eqref{eq:amplitude_antenna}, with special emphasis on line \eqref{eqline:amplitude_antenna}.
+
+
+
+%------------------------------
+
+%\clearpage
+\section{Some Figures}
+
+\subsection{Single Figure}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=.40\linewidth]{example-image-a}
+	\caption{A figure, with a caption. A very long caption. A really rather long caption, to show off the line width for captions.}
+	\label{fig1:single_image}
+\end{figure}
+
+
+%\clearpage
+\subsection{Side By Side}
+
+\begin{figure}[!ht]
+	\centering
+	\begin{subfigure}[t]{.40\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{example-image-a}
+		\subcaption{A sub-figure.}
+		\label{subfig1:left_subimage}
+	\end{subfigure}
+	\hspace{.10\textwidth} % some spacing. Alternatively, \hfill works well
+	\begin{subfigure}[t]{.40\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{example-image-b}
+		\subcaption{Another sub-figure.}
+		\label{subfig1:right_subimage}
+	\end{subfigure}
+	\caption{Two different sub-figures.}
+	\label{fig1:two_images}
+\end{figure}
+
+In \ref{fig1:two_images}, we have two images, \ref{subfig1:left_subimage} and \ref{subfig1:right_subimage}, side by side.
+
+%\lipsum[4-5]
+
+\clearpage
+\subsection{Three Figures}
+
+\begin{figure}[!ht]
+	\begin{subfigure}[t]{.40\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{example-image-a}
+		\subcaption{First.}
+		\label{subfig1:first_image}
+	\end{subfigure}
+	\hspace{.10\textwidth}
+	\begin{subfigure}[t]{.40\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{example-image-b}
+		\subcaption{Second.}
+		\label{subfig1:second_image}
+	\end{subfigure}
+	\centering
+	\begin{subfigure}[t]{.40\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{example-image-c}
+		\subcaption{Third.}
+		\label{subfig1:third_image}
+	\end{subfigure}
+	\caption{Three sub-figures, in the same image.}
+	\label{fig1:three_images}
+\end{figure}
+
+%\clearpage
+\section{Some Tables}
+
+\subsection{A Simple Table}
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{c c c c c c c}
+		\toprule
+		\textbf{Measurement} & 
+		$1$ & 	$2$ & 	$3$ & 	$4$ & 	$5$ & $6$ 
+		\\
+		%------------------------------
+		\midrule
+		Experiment 1 
+		& \num{4.20}	
+		& \num{27.13}	
+		& \num{70.06}	
+		& \num{133.35}	
+		& \num{180.42}	
+		& \num{267.73}	\\ 
+		Experiment 2 
+		& \num{6.34}	
+		& \num{37.72}	
+		& \num{99.00}	
+		& \num{132.12}	
+		& \num{201.62}	
+		& \num{221.37}	\\ 
+		Experiment 3 
+		& \num{10.62}	
+		& \num{64.53}	
+		& \num{171.98}	
+		& \num{282.91}	
+		& \num{335.09}	
+		& \num{541.63}  \\
+		\bottomrule
+	\end{tabular}
+	\caption{Table with a simple structure.}
+	\label{tab4:tauform_vals}
+\end{table}
+
+
+
+\subsection{A More Complicated Table}
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{c c c c c}
+		\toprule
+		\multirow{2}{*}{\textbf{Analysis Methods}} &
+		\multicolumn{4}{c}{\textbf{Data Sets}} \\
+		%------------------------------
+		& 
+		\textbf{Data Set 1} & 
+		\textbf{Data Set 2} & 
+		\textbf{Data Set 3} & 
+		\textbf{Data Set 4} \\
+		%------------------------------
+		\midrule
+		Method 1	& \num{5.09}	& \num{4.15}	& \num{6.02}	& \num{8.49}		\\ 
+		Method 2	& \num{2.19}	& \num{2.09}	& \num{4.44}	& \num{4.74}		\\ 
+		\bottomrule
+	\end{tabular}
+	\caption{Table with a somewhat less simple structure.}
+	\label{tab2:tau_form_resolution_mean}
+\end{table}

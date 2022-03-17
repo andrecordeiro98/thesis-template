@@ -1,0 +1,25 @@
+
+\begin{thenomenclature} 
+\nomgroup{G}
+  \item [{$\mu,\nu,\sigma$}]\begingroup Spacetime indices.\nomeqref {0}\nompageref{xii}
+  \item [{$\overline{\psi}$}]\begingroup Antifermion field.\nomeqref {0}\nompageref{xii}
+  \item [{$\psi$}]\begingroup Fermion field.\nomeqref {0}\nompageref{xii}
+\nomgroup{R}
+  \item [{$\mathscr{L}$}]\begingroup Lagrangian, or lagrangian density.\nomeqref {0}\nompageref{xii}
+  \item [{$\phantom{}\bar{u}(p)$}]\begingroup Spinor for fermions (outgoing).\nomeqref {0}\nompageref{xii}
+  \item [{$\phantom{}\bar{v}(p)$}]\begingroup Spinor for antifermions (incoming).\nomeqref {0}\nompageref{xii}
+  \item [{$\phantom{}u(p)$}]\begingroup Spinor for fermions (incoming).\nomeqref {0}\nompageref{xii}
+  \item [{$\phantom{}v(p)$}]\begingroup Spinor for antifermions (outgoing).\nomeqref {0}\nompageref{xii}
+  \item [{$A\ind{a}{\mu}$}]\begingroup Gluon field with colour $a$.\nomeqref {0}\nompageref{xii}
+  \item [{$D\sub{\mu}$}]\begingroup Covariant derivative.\nomeqref {0}\nompageref{xii}
+  \item [{$F\ind{ }{\mu\nu}$}]\begingroup Field strength tensor.\nomeqref {0}\nompageref{xii}
+  \item [{$p,k,q$}]\begingroup Four-momenta.\nomeqref {0}\nompageref{xii}
+  \item [{$T\ind{a}{ij}$}]\begingroup Colour matrix.\nomeqref {0}\nompageref{xii}
+\nomgroup{S}
+  \item [{$i,j,k$}]\begingroup Fundamental colour indices.\nomeqref {0}\nompageref{xii}
+\nomgroup{T}
+  \item [{$a,b,c$}]\begingroup Adjoint colour indices.\nomeqref {0}\nompageref{xii}
+\nomgroup{Z}
+  \item [{$\partial\sub{\mu}$}]\begingroup Partial derivative.\nomeqref {0}\nompageref{xii}
+
+\end{thenomenclature}

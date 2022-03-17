@@ -1,0 +1,67 @@
+% In case you want to define your own nomenclature groups
+\renewcommand{\nomgroup}[1]{%
+	\ifthenelse{	\equal{#1}{R}	}{	\item[\textbf{Roman symbols}]	}{%
+	\ifthenelse{	\equal{#1}{G}	}{	\item[\textbf{Greek symbols}]	}{%
+	\ifthenelse{	\equal{#1}{S}	}{	\item[\textbf{Subscripts}]		}{%
+	\ifthenelse{	\equal{#1}{T}	}{	\item[\textbf{Superscripts}]	}{%   
+	\ifthenelse{	\equal{#1}{Z}	}{	\item[\textbf{Other}]			}{%
+}}}}}}
+
+% Separation between symbol and description
+\setlength{\nomlabelwidth}{1.5cm}
+
+
+% The definitions can be placed anywhere in the document body
+% and their order is sorted by <symbol> automatically when
+% calling makeindex in the makefile
+%
+% The \glossary command has the following syntax:
+%
+% \glossary{entry}
+%
+% The \nomenclature command has the following syntax:
+%
+% \nomenclature[<prefix>]{<symbol>}{<description>}
+%
+% where <prefix> is used for fine tuning the sort order,
+% <symbol> is the symbol to be described, and <description> is
+% the actual description.
+
+% ----------------------------------------------------------------------
+% Roman symbols [r]
+
+\nomenclature[r]{$A\ind{a}{\mu}$}{Gluon field with colour $a$.}
+\nomenclature[r]{$F\ind{ }{\mu\nu}$}{Field strength tensor.}
+\nomenclature[r]{$D\sub{\mu}$}{Covariant derivative.}
+\nomenclature[r]{$T\ind{a}{ij}$}{Colour matrix.}
+\nomenclature[r]{$p,k,q$}{Four-momenta.}
+
+%Phantoms to force position (alphabetical)
+\nomenclature[r]{$\phantom{}u(p)$}{Spinor for fermions (incoming).}
+\nomenclature[r]{$\phantom{}\bar{u}(p)$}{Spinor for fermions (outgoing).}
+
+\nomenclature[r]{$\phantom{}\bar{v}(p)$}{Spinor for antifermions (incoming).}
+\nomenclature[r]{$\phantom{}v(p)$}{Spinor for antifermions (outgoing).}
+
+\nomenclature[r]{$\mathscr{L}$}{Lagrangian, or lagrangian density.}
+% ----------------------------------------------------------------------
+% Greek symbols [g]
+
+\nomenclature[g]{$\psi$}{Fermion field.}
+\nomenclature[g]{$\overline{\psi}$}{Antifermion field.}
+\nomenclature[g]{$\mu,\nu,\sigma$}{Spacetime indices.}
+% ----------------------------------------------------------------------
+% Subscripts [s]
+
+\nomenclature[s]{$i,j,k$}{Fundamental colour indices.}
+
+% ----------------------------------------------------------------------
+% Supercripts [t]
+
+\nomenclature[t]{$a,b,c$}{Adjoint colour indices.}
+
+% ----------------------------------------------------------------------
+% Others
+
+\nomenclature[z]{$\partial\sub{\mu}$}{Partial derivative.}
+

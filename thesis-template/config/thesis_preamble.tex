@@ -1,0 +1,343 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PACKAGES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Language
+\usepackage[utf8]{inputenc} 			% Input encoding
+\usepackage[english]{babel} 			% English
+\usepackage{csquotes}                   % ADDED to make sure quoted texts show up correctly.
+
+%Mathematics
+\usepackage{amsmath}					% American Mathematical Society Package
+\usepackage{amsfonts}					% Mathematical Fonts
+\usepackage{amssymb}					% More mathematical symbols
+\usepackage{mathtools}					% More control and better appearance of Mathematics
+
+%Figures and captions
+\usepackage{graphicx}					% More complex version of graphics for figures
+%\usepackage{caption}					% More control over captions
+\usepackage[labelfont=bf,font=small]{caption}      % More control over captions (and boldface "Figure 1.1." text)
+\usepackage[labelfont=bf,font=small]{subcaption}   % Same, for subcaptions
+\usepackage{sidecap}					% Side captions (just in case)
+
+\pdfsuppresswarningpagegroup=1			% This just suppresses an annoying (and meaningless) warning
+
+%ThE LooOks!
+\usepackage{fancyhdr}					% Fancy Headers
+\usepackage{geometry}					% Control geometry
+\usepackage{setspace}
+\usepackage[bottom]{footmisc}           %Send footnotes to the bottom of the page
+
+%Tables and other environments
+\usepackage{tabularx}					% Better tables
+\usepackage{booktabs}					% Even better tables
+\usepackage{enumitem}					% More control over enumerate environments
+\usepackage{arydshln}					% Use dashed lines in tables
+
+%Physics
+\usepackage{siunitx}					% SI units			
+\usepackage{physics}					% Useful notations (bras and kets for example)
+
+% Useful Tools
+\usepackage{lipsum}						% Create random text
+\usepackage{comment}					% Create comments
+%\usepackage{xcolor} 					% Colors
+\usepackage[dvipsnames]{xcolor} 		% Better Colors
+\usepackage{framed}						% Colored frames
+\usepackage{setspace}					% Control spaces
+
+%My packages
+\usepackage{slashed}                    % Feynman notation for Dirac matrices, i.e. \slashed{}
+\usepackage{nccmath}                    % More math stuff (\mfrac for medium sized fractions!)
+\usepackage{bbold}                      % For \mathbb{1}
+\usepackage{multirow}                   % multirows
+\usepackage{booktabs}                   % nice tables, idk
+\usepackage{environ}                    %\NewEnviron{}{}{} to define environments
+
+%Load last
+\usepackage{hyperref}					% Create hyperlinks
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DOCUMENT SETUP
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Paper Geometry
+\geometry{
+	paper=a4paper, 	% A4 Paper
+	inner=2.5cm, 	% Inner margin
+	outer=2.5cm, 	% Outer margin
+	top=2.5cm, 		% Top margin
+	bottom=2.5cm, 	% Bottom margin
+}
+
+%Line spacing
+\renewcommand{\baselinestretch}{1.5}
+
+
+% ---------------------------
+% SELECT THE MATH FONT
+% NOTE: Comment out all of them for the default computer modern 
+
+%\usepackage{mathpazo}	% Loads Palatino for math use (serifed math font)
+\usepackage{cmbright}	% Loads Computer Modern Bright (normal text font can be different)
+
+% ---------------------------
+% SELECT THE NORMAL TEXT FONT
+
+%\newcommand{\fontnamestring}{phv}	% Helvetica
+\newcommand{\fontnamestring}{cmbr}	% Computer Modern Bright
+
+\renewcommand{\rmdefault}{\fontnamestring}
+\renewcommand{\sfdefault}{\fontnamestring}
+
+\def\FontLn{% 16 pt normal
+	\usefont{T1}{\fontnamestring}{m}{n}\fontsize{16pt}{16pt}\selectfont}
+\def\FontLb{% 16 pt bold
+	\usefont{T1}{\fontnamestring}{b}{n}\fontsize{16pt}{16pt}\selectfont}
+\def\FontMn{% 14 pt normal
+	\usefont{T1}{\fontnamestring}{m}{n}\fontsize{14pt}{14pt}\selectfont}
+\def\FontMb{% 14 pt bold
+	\usefont{T1}{\fontnamestring}{b}{n}\fontsize{14pt}{14pt}\selectfont}
+\def\FontSn{% 12 pt normal
+	\usefont{T1}{\fontnamestring}{m}{n}\fontsize{12pt}{12pt}\selectfont}
+
+
+
+
+%------------------------
+%-------- MINE ----------
+%------------------------
+%No adjustment, all blank space is sent to the bottom of the page
+\raggedbottom
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NOTE: THESE COMMANDS (ALL THREE) MAKE SURE THE MATH MODE IS BIGGER
+%		I DIDN'T USE THEM, BUT IT MAY VERY WELL LOOK NICER
+
+%Change math mode size
+%\DeclareMathSizes{<tfs>}{<ts>}{<ss>}{<sss>}
+% <tfs> --- Surrounding text
+% <ts>  --- Mathmode text
+% <ss>  --- Subscript
+% <sss> --- Subsubscript
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% UNCOMMENT THE FOLLOWING THREE LINES
+\DeclareMathSizes{9}{10}{8}{6}
+\DeclareMathSizes{10}{10}{8}{6}
+\DeclareMathSizes{11}{10}{8}{6}
+
+%--------------------------
+% Enabling \mathscr{} for pretty calligraphic fonts. :)
+
+\makeatletter
+\DeclareFontEncoding{LS1}{}{}
+\DeclareFontEncoding{LS2}{}{\noaccents@}
+\DeclareFontSubstitution{LS1}{stix}{m}{n}
+\DeclareFontSubstitution{LS2}{stix}{m}{n}
+\makeatother
+
+\DeclareMathAlphabet\mathscr{LS1}{stixscr}{m}{n}
+\SetMathAlphabet\mathscr{bold}{LS1}{stixscr}{b}{n}
+%--------------------------
+
+
+%------------------------
+%------------------------
+
+
+%Make tables align at the separator '.'
+\usepackage{dcolumn}
+\newcolumntype{d}{D{.}{.}{-1}}
+
+%URL links setup
+\colorlet{url_blue}{blue!50!black}
+
+\hypersetup{
+    %pdftitle            = {Thesis Title},
+	pdfpagemode			= {UseOutlines}	,
+	bookmarksopen		= true 			,
+	bookmarksopenlevel	= 0				,
+	hypertexnames		= false			,
+	colorlinks			= true			, % Set to false to disable coloring links
+	citecolor			= blue			, % The color of citations
+	linkcolor			= blue			, % The color of references to document(sections, figures, etc)
+	urlcolor			= url_blue		, % The color of hyperlinks (URLs)
+	pdfstartview		= {FitV}			,
+	breaklinks			= true,
+	unicode								,
+}
+
+%Setup sidecaption aligned to top of figure and caption width
+\sidecaptionvpos{figure}{t}
+\captionsetup{width=.85\textwidth}
+%\captionsetup{width=.95\textwidth}
+
+
+%Set shaded color
+\definecolor{shadecolor}{rgb}{0.8,0.8,0.8}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COVER PAGE TOOLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%new Latex variable names
+\newcommand{\coverThesis}{@undefined} 
+\newcommand{\coverSupervisors}{@undefined}
+\newcommand{\coverExaminationCommittee}{@undefined}
+\newcommand{\coverChairperson}{@undefined} 
+\newcommand{\coverSupervisor}{@undefined} 
+\newcommand{\coverMemberCommittee}{@undefined} 
+
+\addto\captionsenglish{\renewcommand{\coverThesis}{Thesis to obtain the Master of Science Degree in}}
+\addto\captionsenglish{\renewcommand{\coverSupervisors}{Supervisors}}
+\addto\captionsenglish{\renewcommand{\coverExaminationCommittee}{Examination Committee}}
+\addto\captionsenglish{\renewcommand{\coverChairperson}{Chairperson}}
+\addto\captionsenglish{\renewcommand{\coverSupervisor}{Supervisor}}
+\addto\captionsenglish{\renewcommand{\coverMemberCommittee}{Members of the Committee}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ACKNOWLEDGEMENT SECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% new LaTeX variable name
+\newcommand{\acknowledgments}{@undefined} 
+\addto\captionsenglish{\renewcommand{\acknowledgments}{Acknowledgements}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NOMENCLATURE AND GLOSSARY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-----------------------
+% If you want the nomenclature table (list of variables). NOT REQUIRED BY IST
+
+\usepackage{nomencl}
+\makenomenclature
+
+% Group variables according to their symbol type
+\RequirePackage{ifthen}
+
+\renewcommand{\nomgroup}[1]{%
+	\ifthenelse{	\equal{#1}{R}	}{	\item[\textbf{Roman symbols}]	}{%
+	\ifthenelse{	\equal{#1}{G}	}{	\item[\textbf{Greek symbols}]	}{%
+   	\ifthenelse{	\equal{#1}{S}	}{	\item[\textbf{Subscripts}]		}{%
+  	\ifthenelse{	\equal{#1}{T}	}{	\item[\textbf{Superscripts}]	}{%   
+  	}}}}}
+    
+
+%-----------------------
+% For the list of Abbreviations (required by IST)
+
+%Include 'nogroupskip' in options below to eliminate spacing between groups of acronyms starting with the same letter
+%\usepackage[acronym,nonumberlist,nogroupskip]{glossaries} %Works fine for overleaf
+\usepackage[acronym,indexonlyfirst,nonumberlist,nogroupskip,nomain]{glossaries} %Needed for TeXStudio (nomain == do not use main glossary) 
+\makeglossaries
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLIO SETUP
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%NOTE: MONTHS SHOULD BE INTEGERS, USE month = {3} INSTEAD OF month = {mar}
+%NOTE: 'biber' instead of 'bibtex' for bibliography to show up
+%NOTE: 'style=chem-angew' has no titles in the Bibliography.
+%NOTE: 'giveninits=true' writes authors' initials
+
+%NOTE: sorting=<any of the following>
+%nty—sorts entries by name, title, year;
+%nyt—sorts entries by name, year, title;
+%nyvt—sorts entries by name, year, volume, title;
+%anyt—sorts entries by alphabetic label, name, year, title;
+%anyvt—sorts entries by alphabetic label, name, year, volume, title;
+%ynt—sorts entries by year, name, title;
+%ydnt—sorts entries by year (descending order), name, title;
+%none—no sorting. Entries appear in the order they appear in the text.
+
+%NOTE: How to change how many authors appear in the bibliography
+% maxbibnames=<value> (3 by default)
+% minbibnames=<value> (1 by default)
+
+%\usepackage[backend=bibtex, style=chem-angew, doi=false, url=false, isbn=false]{biblatex}
+%\usepackage[backend=biber, style=chem-angew, doi=false, url=false, isbn=false]{biblatex}
+\usepackage[backend=biber, giveninits=true, doi=false, url=false, isbn=false, sorting=none, maxbibnames=5]{biblatex}
+
+%Ignore 'note' field
+\AtEveryBibitem{%
+  \clearfield{note}%
+}
+
+%Bibliography file
+%\bibliography{./bib/my_ref} 
+
+%ALWAYS specify the full path. Also, \bibliography is apparently deprecated, favouring \addbibresource
+%HOWEVER, both work (!) (in Overleaf, that is)
+%\bibliography{Thesis_Template/bib/my_ref} 
+\addbibresource{Thesis_Template/bib/my_ref.bib}
+%%%%%%%
+% NOTE
+% To get this to work on TeXStudio, do: 
+%  Options > Configure TeXStudio > Build > Default Bibliography Tool = Biber 
+%%%%%%%
+
+%---------------------------------------------
+% Set hyperlinks for the Bibliography entries
+\newbibmacro{string+doiurlisbn}[1]{%
+	\iffieldundef{url}{%
+		\iffieldundef{doi}{%
+			\iffieldundef{isbn}{%
+				\iffieldundef{issn}{%
+					#1%
+				}{%
+					\href{http://books.google.com/books?vid=ISSN\thefield{issn}}{#1}%
+				}%
+			}{%
+				\href{http://books.google.com/books?vid=ISBN\thefield{isbn}}{#1}%
+			}%
+		}{%
+			\href{http://dx.doi.org/\thefield{doi}}{#1}%
+		}%
+	}{%
+		\href{\thefield{url}}{#1}%
+	}%
+}
+
+\DeclareFieldFormat{title}{\usebibmacro{string+doiurlisbn}{\mkbibemph{#1}}}
+\DeclareFieldFormat[article,incollection]{title}{\usebibmacro{string+doiurlisbn}{\mkbibquote{#1}}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% OLD CODE. IGNORE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mycomment{
+\newbibmacro{string+doiurl}[1]{%
+	\iffieldundef{url}
+	{\iffieldundef{doi}
+		{#1}
+		{\href{https://doi.org/\thefield{doi}}{#1}}}
+	{\href{\thefield{url}}{#1}}}
+
+
+\makeatletter
+
+\def\blx@driver#1{%
+	\ifcsdef{blx@bbx@#1}
+	{\usebibmacro{string+doiurl}{\csuse{blx@bbx@#1}}}
+	{\ifcsdef{blx@bbx@*}
+		{\blx@warning{%
+				No driver for entry type '#1'.\MessageBreak
+				Using fallback driver}%
+			\usebibmacro{string+doiurl}{\csuse{blx@bbx@*}}}
+		{\blx@error
+			{No driver found}
+			{I can't find a driver for the entry type
+				'\abx@field@entrytype'\MessageBreak
+				and there is no fallback driver either}}}}
+\makeatother
+}
+

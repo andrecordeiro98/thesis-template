@@ -1,0 +1,45 @@
+\glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
+\begin{theglossary}\glossaryheader
+\glsgroupheading{A}\relax \glsresetentrylist %
+\glossentry{AA}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xiii}}}\glsgroupskip
+\glsgroupheading{C}\relax \glsresetentrylist %
+\glossentry{C/A}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xiii}}}%
+\glossentry{CERN}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xiii}}}\glsgroupskip
+\glsgroupheading{D}\relax \glsresetentrylist %
+\glossentry{DGLAP}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xiii}}}%
+\glossentry{DLA}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xiii}}}\glsgroupskip
+\glsgroupheading{F}\relax \glsresetentrylist %
+\glossentry{FF}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xiii}}}\glsgroupskip
+\glsgroupheading{H}\relax \glsresetentrylist %
+\glossentry{HIC}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xiii}}}\glsgroupskip
+\glsgroupheading{I}\relax \glsresetentrylist %
+\glossentry{IQR}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xiii}}}\glsgroupskip
+\glsgroupheading{L}\relax \glsresetentrylist %
+\glossentry{LHC}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xiii}}}%
+\glossentry{LLA}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xiii}}}\glsgroupskip
+\glsgroupheading{P}\relax \glsresetentrylist %
+\glossentry{PDF}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xiii}}}%
+\glossentry{pp}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xiii}}}%
+\glossentry{pQCD}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xiii}}}\glsgroupskip
+\glsgroupheading{Q}\relax \glsresetentrylist %
+\glossentry{QCD}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xiii}}}%
+\glossentry{QGP}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xiii}}}\glsgroupskip
+\glsgroupheading{R}\relax \glsresetentrylist %
+\glossentry{RHIC}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{xiii}}}%
+\end{theglossary}\glossarypostamble
