@@ -338,37 +338,3 @@
 
 \DeclareFieldFormat{title}{\usebibmacro{string+doiurlisbn}{\mkbibemph{#1}}}
 \DeclareFieldFormat[article,incollection]{title}{\usebibmacro{string+doiurlisbn}{\mkbibquote{#1}}}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% OLD CODE. IGNORE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\mycomment{
-\newbibmacro{string+doiurl}[1]{%
-	\iffieldundef{url}
-	{\iffieldundef{doi}
-		{#1}
-		{\href{https://doi.org/\thefield{doi}}{#1}}}
-	{\href{\thefield{url}}{#1}}}
-
-
-\makeatletter
-
-\def\blx@driver#1{%
-	\ifcsdef{blx@bbx@#1}
-	{\usebibmacro{string+doiurl}{\csuse{blx@bbx@#1}}}
-	{\ifcsdef{blx@bbx@*}
-		{\blx@warning{%
-				No driver for entry type '#1'.\MessageBreak
-				Using fallback driver}%
-			\usebibmacro{string+doiurl}{\csuse{blx@bbx@*}}}
-		{\blx@error
-			{No driver found}
-			{I can't find a driver for the entry type
-				'\abx@field@entrytype'\MessageBreak
-				and there is no fallback driver either}}}}
-\makeatother
-}
-
