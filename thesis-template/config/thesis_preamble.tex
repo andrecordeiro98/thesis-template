@@ -263,10 +263,15 @@
 %-----------------------
 % For the list of Abbreviations (required by IST)
 
+% 'nomain'         - Do not use main glossary.
+% 'acronym'        - Prints the acronyms. Pairs with previous option.
+% 'nogroupskip'    - Eliminate spacing between groups of acronyms starting with the same letter.
+% 'nopostdot'      - Does not insert a '.' at the end of acronym description (user must input by default).
+% 'nonumberlist'   - Suppresses the list of document locations for each entry.
+% 'indexonlyfirst' - Only adds to '.acr' file when an abbreviation is included in text for the first time.
+% NOTE: THIS LAST ONE IS ONLY RELEVANT IF ONE REFERENCES THE ACRONYMS IN-TEXT (BY USING \Gls, OR SOME SUCH THING)
 
-%Include 'nogroupskip' in options below to eliminate spacing between groups of acronyms starting with the same letter
-%\usepackage[acronym,nonumberlist,nogroupskip]{glossaries} %Works fine for overleaf
-\usepackage[acronym,indexonlyfirst,nonumberlist,nogroupskip,nomain]{glossaries} %Needed for TeXStudio (nomain == do not use main glossary) 
+\usepackage[nomain,acronym,nogroupskip,nopostdot,nonumberlist,indexonlyfirst]{glossaries}
 \makeglossaries
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

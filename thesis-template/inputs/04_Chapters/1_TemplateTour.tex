@@ -101,9 +101,9 @@ When making changes to the \textit{List of Abbreviations}, \textit{List of Symbo
 	\item Compiling the \texttt{.tex} file \textbf{again} [F5].
 \end{itemize}
 
-\noindent Note, if the change involves erasing a line from the \textit{List of Abbreviations}, the last two steps may need to be repeated (keep producing the glossary files and recompiling the project). Besides the hotkeys, these commands can be found in the \textit{Tools} menu in the upper bar.
+\noindent Note, if the change involves erasing a line from the \textit{List of Abbreviations} (\textit{Glossary}), the last two steps may need to be repeated (keep producing the glossary files and recompiling the project). Besides the hotkeys, these commands can be found in the \textit{Tools} menu in the upper bar.
 
-For the \textit{Bibliography}, the same procedure is required. This is also true for the \textit{List of Symbols}, with an additional caveat that the compilation command in \textit{Options} $\rightarrow$ \textit{Configure TeXstudio} $\rightarrow$ \textit{Commands} $\rightarrow$ \textit{Make Index} should be changed to one of the following
+For the \textit{Bibliography}, a similar procedure is required. This is also true for the \textit{List of Symbols} (\textit{Nomenclature}), with an additional caveat that the compilation command in \textit{Options} $\rightarrow$ \textit{Configure TeXstudio} $\rightarrow$ \textit{Commands} $\rightarrow$ \textit{Make Index} should be changed to one of the following
 \begin{verbatim}
 	makeindex.exe %.nlo -s nomencl.ist -o %.nls
 	makeindex %.nlo -s nomencl.ist -o %.nls
@@ -115,6 +115,6 @@ For the \textit{Bibliography}, the same procedure is required. This is also true
 
 \noindent In \textit{Overleaf}, it is enough to delete the cached files before recompiling the project. This can be done by clicking the \textit{Logs and output files} button (which displays the compilation errors and warnings), followed by the \textit{Trash Can} icon. Note, this is not necessary when deleting or re-adding an element of the glossary, only when making changes.
 
-This behaviour was verified on Overleaf, with the pdfLaTeX compiler, using TeX Live version 2020.
+This behaviour was verified on \textit{Overleaf}, with the \textit{pdfLaTeX} compiler, using TeX Live version 2020.
 
 
