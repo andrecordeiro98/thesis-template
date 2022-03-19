@@ -6,6 +6,8 @@ This is a LaTeX thesis template compliant with the guidelines of Instituto Super
 
 Pedro Cosme and Diogo Ribeiro are responsible for the basis of this template, and the author is indebted to their work. A different version of this template is available [here](https://github.com/diogoribeiro98/IST_Master_Thesis_Template_V2).
 
+Thanks to Tomás Cabrito for providing a placeholder image.
+
 ## How to use this template
 
 A thorough description of the file structure and the commands used to define the typesetting can be found in the included file `ThesisTemplate-Guide.pdf`. 
