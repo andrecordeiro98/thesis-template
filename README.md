@@ -29,7 +29,7 @@ noting that you can also define a hotkey for this command in the `Shortcuts` tab
 After this setup, the procedure is as follows,
 
 - Build the main file (press `F5` or `Tools > Build & View`);
-- Build the auxialiary files (use `Tools > Glossary` and `Tools > Index`);
+- Build the auxiliary files (use `Tools > Glossary` and `Tools > Index`);
 - Build the main file _again_ (`F5`).
 
 As long as you do not make any changes to the _List of Abbreviations_ or _List of Symbols_, you won't need to repeat this procedure to update the `.acr` and `.nls` auxiliary files, respectively.
