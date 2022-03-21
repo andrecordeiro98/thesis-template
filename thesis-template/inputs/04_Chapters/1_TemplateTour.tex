@@ -22,7 +22,7 @@ The \texttt{/config} folder contains two configuration files that should be edit
 \begin{itemize}
 	\item \Verb*|\usepackage[labelfont=bf,font=small]{caption}| is used to set the ``\textbf{Figure X.Y:}'' to be in boldface. Same is done for subcaptions.
 	\item \Verb*|\usepackage{cmbright}| and \Verb*|\newcommand{\fontnamestring}{cmbr}| are done to set the font to Computer Modern Bright for both math mode and normal text.
-	\item \Verb*|\DeclareMathSizes{<tfs>}{<ts>}{<ss>}{<sss>}| is called to set the size of math mode, both in equations and inline. The arguments are respectively the size of surrounding text, the size for math mode, the size of subscripts, and the size of subsubscripts. It must be called twice, with \verb+<tfs>+ larger and smaller than the font size used in the document.
+	%\item \Verb*|\DeclareMathSizes{<tfs>}{<ts>}{<ss>}{<sss>}| is called to set the size of math mode, both in equations and inline, such as $\sqrt{x\upp{2} + 1}$, $f\sub{p/h}(x, Q\upp{2})$, or $\tau\ind{-1}{\sf form} \propto z \,\theta\upp{2}$. The arguments are respectively the size of surrounding text, the size for math mode, the size of subscripts, and the size of subsubscripts. It must be called twice, with \verb+<tfs>+ larger and smaller than the font size used in the document.
 	\item \Verb*|\hypersetup| is called to set the options for hyperlinks inside the document (this includes e.g. the colour of references).
 	\item \Verb*|\captionsetup{width=.85\textwidth}| is called to define the width of captions.
 	\item \Verb*|\usepackage[<options>]{biblatex}| is called to configure the bibliography. Check these options carefully, reading the comments to each portion of the code.

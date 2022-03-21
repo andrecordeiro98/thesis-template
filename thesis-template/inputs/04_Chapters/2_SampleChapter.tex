@@ -3,26 +3,16 @@
 
 This chapter contains some examples of equations, figures, and tables with a suggested style.
 
+\section{Some Text}
+
+\lipsum[3]
+
 %\clearpage
 \section{Some Equations}
 
-\subsection{Font Size in Math Mode}
+The following sections contain various examples of typeset equations, such as $\left(\partial\sub{\mu}\partial\upp{\mu} - m\upp{2}\right) \phi = 0$, $\sqrt{x\upp{2} + 1}$, $f\sub{p/h}(x, Q\upp{2})$, or $\tau\ind{-1}{\sf form} \propto z \,\theta\upp{2}$. 
 
-To change the font size of inline math, such as $\sqrt{x\upp{2} + 1}$, $f\sub{p/h}(x, Q\upp{2})$, or $\tau\ind{-1}{\sf form} \propto z \,\theta\upp{2}$, consider the following lines on the file \texttt{thesis\_preamble.tex},
-
-\begin{figure}[h!]
-\centering
-\begin{BVerbatim}
-	\DeclareMathSizes{9}{10}{8}{6}
-	\DeclareMathSizes{10}{10}{8}{6}
-	\DeclareMathSizes{11}{10}{8}{6}
-\end{BVerbatim}
-\end{figure}
-
-
-\noindent where the arguments of \verb+\DeclareMathSizes{<tfs>}{<ts>}{<ss>}{<sss>}+ are respectively, the size of surrounding text, the size for math mode, the size of subscripts, and the size of subsubscripts.
-%
-This command should be called at least twice, with \verb+<tfs>+ larger and smaller than the font size used in the document. 
+%$\mfrac{\partial f\sub{i} (x,\mu\upp{2})}{\partial \ln \mu\upp{2}} = \mfrac{\alpha(\mu\upp{2})}{2\pi} \int\ind{x}{1} \diff z \, f\sub{j}(x,\mu\upp{2}) P\sub{ij}(\mfrac{x}{z})$ 
 
 \subsection{Single Line, Single Label Equation}
 
