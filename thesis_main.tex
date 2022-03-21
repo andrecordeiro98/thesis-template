@@ -72,7 +72,8 @@ pdftitle={Thesis Title},%
 % NOTE: Change chapter -> section in \addcontentsline{toc}{<section/chapter>}
 %		to determine whether is shows up as a chapter (bold) or a section (indented)
 
-%Table of contents
+% -------------------
+% Table of contents
 \phantomsection
 \renewcommand{\contentsname}{Table of Contents}
 \addcontentsline{toc}{chapter}{\contentsname}
@@ -82,7 +83,8 @@ pdftitle={Thesis Title},%
 \null\newpage
 %\null\newpage
 
-%List of tables
+% -------------------
+% List of tables
 \phantomsection
 %\addcontentsline{toc}{section}{\listtablename}
 \addcontentsline{toc}{chapter}{\listtablename}
@@ -92,7 +94,8 @@ pdftitle={Thesis Title},%
 \null\newpage
 %\null\newpage
 
-%List of figures
+% -------------------
+% List of figures
 \phantomsection
 \addcontentsline{toc}{chapter}{\listfigurename}
 {\hypersetup{linkcolor=black}% Set these links to black
@@ -101,23 +104,26 @@ pdftitle={Thesis Title},%
 \null\newpage
 %\null\newpage
 
+% -------------------
 % Nomenclature
 \renewcommand{\nomname}{List of Symbols}
+% The input
 \input{thesis-template/inputs/03_Glossary_and_Nomenclature/Thesis_Nomenclature}
+\printnomenclature
+% Set up for the table of contents (TOC) entries
 \phantomsection
 \addcontentsline{toc}{chapter}{\nomname}
-\printnomenclature
 %\null\newpage
 
 %Glossary
 \renewcommand{\glossaryname}{List of Abbreviations}
-\input{thesis-template/inputs/03_Glossary_and_Nomenclature/Thesis_Glossary} 
-% For correct hyperlink
-\phantomsection
-\addcontentsline{toc}{chapter}{\glossaryname}
-
+% The input
 \glsaddall
 \printglossary[type=\acronymtype, title=\glossaryname]   %To print the acronyms
+\input{thesis-template/inputs/03_Glossary_and_Nomenclature/Thesis_Glossary} 
+% Set up for the table of contents (TOC) entries
+\phantomsection
+\addcontentsline{toc}{chapter}{\glossaryname}
 
 \null\newpage\null\newpage
 
