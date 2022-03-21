@@ -10,7 +10,7 @@ Thanks to Tomás Cabrito for providing a placeholder image.
 
 ## How to use this template
 
-A thorough description of the file structure and the commands used to define the typesetting can be found in the included file `ThesisTemplate-Guide.pdf`. 
+A thorough description of the file structure and the commands used to define the typesetting can be found in the included file `guide-thesis-template.pdf`. 
 
 ### Online solution: Overleaf
 
