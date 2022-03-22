@@ -107,22 +107,22 @@ pdftitle={Thesis Title},%
 % -------------------
 % Nomenclature
 \renewcommand{\nomname}{List of Symbols}
+\phantomsection
 % The input
 \input{thesis-template/inputs/03_Glossary_and_Nomenclature/Thesis_Nomenclature}
 \printnomenclature
 % Set up for the table of contents (TOC) entries
-\phantomsection
 \addcontentsline{toc}{chapter}{\nomname}
 %\null\newpage
 
 %Glossary
 \renewcommand{\glossaryname}{List of Abbreviations}
+\phantomsection
 % The input
 \glsaddall
 \printglossary[type=\acronymtype, title=\glossaryname]   %To print the acronyms
 \input{thesis-template/inputs/03_Glossary_and_Nomenclature/Thesis_Glossary} 
 % Set up for the table of contents (TOC) entries
-\phantomsection
 \addcontentsline{toc}{chapter}{\glossaryname}
 
 \null\newpage\null\newpage
