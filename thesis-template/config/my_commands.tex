@@ -5,8 +5,8 @@
 % Here, you can neatly define all your auxilliary commands
 
 %Packages
-\usepackage[dvipsnames]{xcolor}
-\usepackage{fancyvrb} %Fancy Verbatim (used with \Verb)
+\RequirePackage[dvipsnames]{xcolor}
+\RequirePackage{fancyvrb} %Fancy Verbatim (used with \Verb)
 
 
 %Commands
@@ -14,7 +14,7 @@
 \newcommand{\orange}[1]{\textcolor{Bittersweet}{#1}} %Orange comments.
 \newcommand{\green}[1]{\textcolor{OliveGreen}{#1}} %Green comments.
 
-%\newcommand{\mycomment}[1]{} %Multi-line comment
+\newcommand{\mycomment}[1]{} %Multi-line comment
 
 \newcommand{\sub}[1]{_{#1}^{}} %Subscripts with proper height
 \newcommand{\upp}[1]{_{}^{#1}} %Superscripts with proper height

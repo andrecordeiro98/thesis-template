@@ -1,0 +1,77 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLIO SETUP
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% NOTE: MONTHS SHOULD BE INTEGERS, USE month = {3} INSTEAD OF month = {mar}
+% NOTE: 'biber' instead of 'bibtex' for bibliography to show up.
+% NOTE: 'style=chem-angew' has no titles in the Bibliography.
+% NOTE: 'style=alphabetic' sets the labels to be the authorname+year.
+% NOTE: 'giveninits=true' writes authors' initials.
+% NOTE: 'citestyle=numeric-comp' gives commas between multiple citations, even with IEEE style
+% NOTE: 'dashed=false' deactivates the use of --- for repeated author
+
+% NOTE: sorting=<any of the following>
+% nty—sorts entries by name, title, year;
+% nyt—sorts entries by name, year, title;
+% nyvt—sorts entries by name, year, volume, title;
+% anyt—sorts entries by alphabetic label, name, year, title;
+% anyvt—sorts entries by alphabetic label, name, year, volume, title;
+% ynt—sorts entries by year, name, title;
+% ydnt—sorts entries by year (descending order), name, title;
+% none—no sorting. Entries appear in the order they appear in the text.
+
+% NOTE: How to change how many authors appear in the bibliography
+% maxbibnames=<value> (3 by default)
+% minbibnames=<value> (1 by default)
+
+\usepackage[backend=biber, style=ieee, citestyle=numeric-comp, dashed=false, giveninits=true, doi=false, url=false, isbn=false, sorting=none, maxbibnames=5]{biblatex}
+
+% ------------------
+% Quote conventions
+%  british		- 'Lorem Ipsum', with punctuation outside
+%  american		- "Lorem Ipsum," with punctuation inside (ugh~)
+%  english		- "Lorem Ipsum", with punctuation outside
+%  portuguese	- «Lorem Ipsum», with punctuation outside
+
+\DefineBibliographyExtras{english}{\stdpunctuation}
+
+
+% ---
+% Prevents most "Overfull \hbox" warnings
+% Disclaimer: may cause "Underfull \hbox" warnings instead. Things will look nicer though.
+%\emergencystretch = 17pt
+
+
+%---------------------------------------------
+% Ignore 'note' field. Ignore the editor's name.
+\AtEveryBibitem{%
+	\clearfield{note}%
+	\clearname{editor}%
+}
+
+%---------------------------------------------
+% Set hyperlinks for the Bibliography entries
+
+\newbibmacro{string+doiurlisbn}[1]{%
+	\iffieldundef{url}{%
+		\iffieldundef{doi}{%
+			\iffieldundef{isbn}{%
+				\iffieldundef{issn}{%
+					#1%
+				}{%
+					\href{http://books.google.com/books?vid=ISSN\thefield{issn}}{#1}%
+				}%
+			}{%
+				\href{http://books.google.com/books?vid=ISBN\thefield{isbn}}{#1}%
+			}%
+		}{%
+			\href{http://dx.doi.org/\thefield{doi}}{#1}%
+		}%
+	}{%
+		\href{\thefield{url}}{#1}%
+	}%
+}
+
+\DeclareFieldFormat{title}{\usebibmacro{string+doiurlisbn}{\mkbibemph{#1}}}
+\DeclareFieldFormat[article,incollection]{title}{\usebibmacro{string+doiurlisbn}{\mkbibquote{#1}}}
+

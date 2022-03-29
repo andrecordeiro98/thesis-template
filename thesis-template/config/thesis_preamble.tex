@@ -16,7 +16,6 @@
 
 %Figures and captions
 \usepackage{graphicx}					% More complex version of graphics for figures
-%\usepackage{caption}					% More control over captions
 \usepackage[labelfont=bf,font=small]{caption}		% More control over captions (and boldface "Figure 1.1." text)
 \usepackage[labelfont=bf,font=small]{subcaption}	% Same, for subcaptions
 \usepackage{sidecap}					% Side captions (just in case)
@@ -42,10 +41,9 @@
 % Useful Tools
 \usepackage{lipsum}						% Create random text
 \usepackage{comment}					% Create comments
-%\usepackage{xcolor} 					% Colors
+\usepackage{xcolor} 					% Colors
 \usepackage[dvipsnames]{xcolor} 		% Better Colors
 \usepackage{framed}						% Colored frames
-\usepackage{setspace}					% Control spaces
 
 %My packages
 \usepackage{slashed}                    % Feynman notation for Dirac matrices, i.e. \slashed{}
@@ -73,8 +71,7 @@
 }
 
 %Line spacing
-\renewcommand{\baselinestretch}{1.5}
-
+\setstretch{1.5}
 
 % ---------------------------
 % SELECT THE MATH FONT
@@ -186,7 +183,7 @@
 \newcolumntype{d}{D{.}{.}{-1}}
 
 %URL links setup
-\colorlet{url_blue}{blue!50!black}
+\colorlet{url-blue}{blue!70!black}
 
 \hypersetup{
     %pdftitle            = {Thesis Title},
@@ -197,7 +194,7 @@
 	colorlinks			= true			, % Set to false to disable coloring links
 	citecolor			= blue			, % The color of citations
 	linkcolor			= blue			, % The color of references to document(sections, figures, etc)
-	urlcolor			= url_blue		, % The color of hyperlinks (URLs)
+	urlcolor			= url-blue		, % The color of hyperlinks (URLs)
 	pdfstartview		= {FitV}			,
 	breaklinks			= true,
 	unicode								,
@@ -273,73 +270,3 @@
 
 \usepackage[nomain,acronym,nogroupskip,nopostdot,nonumberlist,indexonlyfirst]{glossaries}
 \makeglossaries
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% BIBLIO SETUP
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%NOTE: MONTHS SHOULD BE INTEGERS, USE month = {3} INSTEAD OF month = {mar}
-%NOTE: 'biber' instead of 'bibtex' for bibliography to show up
-%NOTE: 'style=chem-angew' has no titles in the Bibliography.
-%NOTE: 'giveninits=true' writes authors' initials
-
-%NOTE: sorting=<any of the following>
-%nty—sorts entries by name, title, year;
-%nyt—sorts entries by name, year, title;
-%nyvt—sorts entries by name, year, volume, title;
-%anyt—sorts entries by alphabetic label, name, year, title;
-%anyvt—sorts entries by alphabetic label, name, year, volume, title;
-%ynt—sorts entries by year, name, title;
-%ydnt—sorts entries by year (descending order), name, title;
-%none—no sorting. Entries appear in the order they appear in the text.
-
-%NOTE: How to change how many authors appear in the bibliography
-% maxbibnames=<value> (3 by default)
-% minbibnames=<value> (1 by default)
-
-%\usepackage[backend=bibtex, style=chem-angew, doi=false, url=false, isbn=false]{biblatex}
-%\usepackage[backend=biber, style=chem-angew, doi=false, url=false, isbn=false]{biblatex}
-\usepackage[backend=biber, giveninits=true, doi=false, url=false, isbn=false, sorting=none, maxbibnames=5]{biblatex}
-
-%Ignore 'note' field
-\AtEveryBibitem{%
-  \clearfield{note}%
-}
-
-%Bibliography file
-%\bibliography{./bib/my_ref} 
-
-%ALWAYS specify the full path. Also, \bibliography is apparently deprecated, favouring \addbibresource
-%HOWEVER, both work (!) (in Overleaf, that is)
-%\bibliography{thesis-template/bib/my_ref} 
-\addbibresource{thesis-template/bib/my_ref.bib}
-%%%%%%%
-% NOTE
-% To get this to work on TeXStudio, do: 
-%  Options > Configure TeXStudio > Build > Default Bibliography Tool = Biber 
-%%%%%%%
-
-%---------------------------------------------
-% Set hyperlinks for the Bibliography entries
-\newbibmacro{string+doiurlisbn}[1]{%
-	\iffieldundef{url}{%
-		\iffieldundef{doi}{%
-			\iffieldundef{isbn}{%
-				\iffieldundef{issn}{%
-					#1%
-				}{%
-					\href{http://books.google.com/books?vid=ISSN\thefield{issn}}{#1}%
-				}%
-			}{%
-				\href{http://books.google.com/books?vid=ISBN\thefield{isbn}}{#1}%
-			}%
-		}{%
-			\href{http://dx.doi.org/\thefield{doi}}{#1}%
-		}%
-	}{%
-		\href{\thefield{url}}{#1}%
-	}%
-}
-
-\DeclareFieldFormat{title}{\usebibmacro{string+doiurlisbn}{\mkbibemph{#1}}}
-\DeclareFieldFormat[article,incollection]{title}{\usebibmacro{string+doiurlisbn}{\mkbibquote{#1}}}

@@ -25,11 +25,16 @@ The \texttt{/config} folder contains two configuration files that should be edit
 	%\item \Verb*|\DeclareMathSizes{<tfs>}{<ts>}{<ss>}{<sss>}| is called to set the size of math mode, both in equations and inline, such as $\sqrt{x\upp{2} + 1}$, $f\sub{p/h}(x, Q\upp{2})$, or $\tau\ind{-1}{\sf form} \propto z \,\theta\upp{2}$. The arguments are respectively the size of surrounding text, the size for math mode, the size of subscripts, and the size of subsubscripts. It must be called twice, with \verb+<tfs>+ larger and smaller than the font size used in the document.
 	\item \Verb*|\hypersetup| is called to set the options for hyperlinks inside the document (this includes e.g. the colour of references).
 	\item \Verb*|\captionsetup{width=.85\textwidth}| is called to define the width of captions.
-	\item \Verb*|\usepackage[<options>]{biblatex}| is called to configure the bibliography. Check these options carefully, reading the comments to each portion of the code.
 \end{itemize}
 
 
 \item \texttt{my\_commands.tex} -- Contains user defined commands. I have some packages used for this template, as well as some commands pertaining to typesetting subscripts and superscripts.
+
+\item \texttt{biblio-setup.tex} -- Defines the bibliography style as it appears on this \texttt{.pdf}.
+\begin{itemize}
+	\item \Verb*|\usepackage[<options>]{biblatex}| is called to configure the bibliography. Check these options carefully, reading the comments to each portion of the code.
+\end{itemize}
+
 \end{itemize}
 
 \subsection{The {\normalfont\texttt{/input}} folder} %\normalfont to avoid a warning
@@ -66,16 +71,17 @@ Finally, the bibliography is handled by the \texttt{/bib} folder. Inside you wil
 
 \begin{verbatim}
 @article{Einstein:1905,
-author = {Einstein, Albert},
-title = {On the electrodynamics of moving bodies},
-doi = {10.1002/andp.200590006},
-journal = {Annalen Phys.},
-volume = {17},
-year = {1905}
+	author = "Einstein, Albert",
+	title = "{On the electrodynamics of moving bodies}",
+	doi = "10.1002/andp.200590006",
+	journal = "Annalen Phys.",
+	volume = "17",
+	pages = "891--921",
+	year = "1905"
 }
 \end{verbatim}
 %
-and be cited with the \verb|\cite| command as \cite{Einstein:1905}. To cite multiple sources at once, do \cite{FeynCalc:1991,FeynCalc:2016,FeynCalc:2020}. To specify a page in a source, one can say \cite[p.~500]{Dokshitzer:1991} --- in fact, any text can be added after the reference, as \cite[Any text you might want]{Peskin:1995}.
+and be cited with the \verb|\cite| command as \cite{Einstein:1905}. To cite multiple sources at once, do \cite{Mertig:1990:feyncalc,Shtabovenko:2016:feyncalc,Shtabovenko:2020:feyncalc}. To specify a page in a source, one can say \cite[p.~500]{Dokshitzer:1991} --- in fact, any text can be added after the reference, as \cite[Any text you might want]{Peskin:1995}.
 
 The easiest way to assure consistency with the formatting of each entry is to retrieve them from the same website (\href{https://inspirehep.net/}{InspireHEP}, \href{https://ui.adsabs.harvard.edu/}{NASA/ADS}, ... ).
 
