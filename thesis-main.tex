@@ -1,14 +1,14 @@
 \documentclass[10pt,a4paper,twoside]{report}
 
 % Commands
-\input{thesis-template/config/my_commands.tex}
+\input{thesis-template/config/my-commands.tex}
 
 % Configuration document
-\input{thesis-template/config/thesis_preamble}
+\input{thesis-template/config/thesis-preamble.tex}
 
 % Bibliography setup
 \input{thesis-template/config/biblio-setup}
-\addbibresource{thesis-template/bib/my_ref.bib}
+\addbibresource{thesis-template/bib/msc-bibliography.bib}
 
 
 %Setup the document title (file properties)
@@ -36,17 +36,17 @@ pdftitle={Thesis Title},%
 % ----------------------------------------------------------------------
 
 %Cover page
-\input{thesis-template/inputs/01_Cover_Page/thesis_front_cover}
+\input{thesis-template/inputs/01-Cover-Page/thesis-front-cover}
 \null\newpage
 \null\newpage
 
 %Dedication page
-\input{thesis-template/inputs/02_Front_Matter/Dedication} 
+\input{thesis-template/inputs/02-Front-Matter/Dedication} 
 %\cleardoublepage
 \null\newpage
 
 %Acknowledgments page
-\input{thesis-template/inputs/02_Front_Matter/Acknowledgements}
+\input{thesis-template/inputs/02-Front-Matter/Acknowledgements}
 %\cleardoublepage
 \null\newpage
 
@@ -55,12 +55,12 @@ pdftitle={Thesis Title},%
 % ----------------------------------------------------------------------
 
 %Mother language
-\input{thesis-template/inputs/02_Front_Matter/Resumo}   
+\input{thesis-template/inputs/02-Front-Matter/Resumo}   
 %\cleardoublepage
 \null\newpage
 
 %English
-\input{thesis-template/inputs/02_Front_Matter/Abstract} 
+\input{thesis-template/inputs/02-Front-Matter/Abstract} 
 %\cleardoublepage
 \null\newpage
 
@@ -109,7 +109,7 @@ pdftitle={Thesis Title},%
 \renewcommand{\nomname}{List of Symbols}
 \phantomsection
 % The input
-\input{thesis-template/inputs/03_Glossary_and_Nomenclature/Thesis_Nomenclature}
+\input{thesis-template/inputs/03-Glossary-and-Nomenclature/Thesis-Nomenclature}
 \printnomenclature
 % Set up for the table of contents (TOC) entries
 \addcontentsline{toc}{chapter}{\nomname}
@@ -121,7 +121,7 @@ pdftitle={Thesis Title},%
 % The input
 \glsaddall
 \printglossary[type=\acronymtype, title=\glossaryname]   %To print the acronyms
-\input{thesis-template/inputs/03_Glossary_and_Nomenclature/Thesis_Glossary} 
+\input{thesis-template/inputs/03-Glossary-and-Nomenclature/Thesis-Glossary} 
 % Set up for the table of contents (TOC) entries
 \addcontentsline{toc}{chapter}{\glossaryname}
 
@@ -138,11 +138,11 @@ pdftitle={Thesis Title},%
 %  Chapters
 % ----------------------------------------------------------------------
 
-\input{thesis-template/inputs/04_Chapters/1_TemplateTour}
+\input{thesis-template/inputs/04-Chapters/1-TemplateTour}
 \null\newpage
 %\null\newpage
 
-\input{thesis-template/inputs/04_Chapters/2_SampleChapter}
+\input{thesis-template/inputs/04-Chapters/2-SampleChapter}
 \null\newpage
 %\null\newpage
 
@@ -166,7 +166,7 @@ pdftitle={Thesis Title},%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
 
-\input{thesis-template/inputs/05_Appendix/A_Appendix}
+\input{thesis-template/inputs/05-Appendix/A-Appendix}
 \null\newpage
 
 % Last page intentionally left blank

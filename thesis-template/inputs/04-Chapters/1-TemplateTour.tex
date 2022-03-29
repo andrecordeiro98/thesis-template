@@ -17,7 +17,7 @@ This thesis template is separated into several files for easy editing. The \text
 The \texttt{/config} folder contains two configuration files that should be edited with care:
 %
 \begin{itemize}
-\item \texttt{thesis\_preamble.tex} -- Contains all packages required by the template as well as some useful ones for writing mathematical expressions, defining tables and including figures. It also contains the commands for setting up the thesis geometry and looks.
+\item \texttt{thesis-preamble.tex} -- Contains all packages required by the template as well as some useful ones for writing mathematical expressions, defining tables and including figures. It also contains the commands for setting up the thesis geometry and looks.
 
 \begin{itemize}
 	\item \Verb*|\usepackage[labelfont=bf,font=small]{caption}| is used to set the ``\textbf{Figure X.Y:}'' to be in boldface. Same is done for subcaptions.
@@ -28,7 +28,7 @@ The \texttt{/config} folder contains two configuration files that should be edit
 \end{itemize}
 
 
-\item \texttt{my\_commands.tex} -- Contains user defined commands. I have some packages used for this template, as well as some commands pertaining to typesetting subscripts and superscripts.
+\item \texttt{my-commands.tex} -- Contains user defined commands. I have some packages used for this template, as well as some commands pertaining to typesetting subscripts and superscripts.
 
 \item \texttt{biblio-setup.tex} -- Defines the bibliography style as it appears on this \texttt{.pdf}.
 \begin{itemize}
@@ -42,13 +42,13 @@ The \texttt{/config} folder contains two configuration files that should be edit
 After the document is configured, the actual writing can begin. In the \texttt{/input} folder you will find several folders with several documents inside:
 
 \begin{itemize}
-\item \texttt{/01\_Cover\_Page} -- A cover according to \textit{IST} regulations. The names of the author, supervisors, and committee members must be added, as well as the name of the degree. You can also choose a cover image.
+\item \texttt{/01-Cover-Page} -- A cover according to \textit{IST} regulations. The names of the author, supervisors, and committee members must be added, as well as the name of the degree. You can also choose a cover image.
 
-\item \texttt{/02\_Front\_Matter} -- The Front Matter of a thesis is composed of the \textit{Dedication}, \textit{Acknowledgements}, \textit{Abstract} and \textit{Resumo} files. In the \textit{Dedication} file you may dedicate the thesis to someone or write a quote. The \textit{Acknowledgements} page allow you to acknowledge a funding grant, some organisation, or people whose importance to you and your work should be mentioned. The \textit{Abstract} and \textit{Resumo} pages should be essentially the same (albeit in different languages) and should contain a brief summary of your work. Since the character limit is identical for both languages, it may be useful to have slightly different texts in the \textit{Abstract} and \textit{Resumo} chapters.
+\item \texttt{/02-Front-Matter} -- The Front Matter of a thesis is composed of the \textit{Dedication}, \textit{Acknowledgements}, \textit{Abstract} and \textit{Resumo} files. In the \textit{Dedication} file you may dedicate the thesis to someone or write a quote. The \textit{Acknowledgements} page allow you to acknowledge a funding grant, some organisation, or people whose importance to you and your work should be mentioned. The \textit{Abstract} and \textit{Resumo} pages should be essentially the same (albeit in different languages) and should contain a brief summary of your work. Since the character limit is identical for both languages, it may be useful to have slightly different texts in the \textit{Abstract} and \textit{Resumo} chapters.
 
-\item \texttt{/03\_Glossary\_and\_Nomenclature} -- The \textit{List of Abbreviations}/\textit{Glossary} pages should contain important acronyms that you use throughout the thesis. You may also include mathematical symbols to form a \textit{List of Symbols}/\textit{Nomenclature} page, although this is not mandatory. Special care must be taken when compiling these sections, as described below.
+\item \texttt{/03-Glossary-and-Nomenclature} -- The \textit{List of Abbreviations}/\textit{Glossary} pages should contain important acronyms that you use throughout the thesis. You may also include mathematical symbols to form a \textit{List of Symbols}/\textit{Nomenclature} page, although this is not mandatory. Special care must be taken when compiling these sections, as described below.
 
-\item \texttt{/04\_Chapters} -- Most writing happens inside this folder. Here you should create a separate file for each chapter. Chapter files may start in the following manner
+\item \texttt{/04-Chapters} -- Most writing happens inside this folder. Here you should create a separate file for each chapter. Chapter files may start in the following manner
 
 \begin{verbatim}
 \chapter{Chapter name}
@@ -58,7 +58,7 @@ After the document is configured, the actual writing can begin. In the \texttt{/
 
 \noindent as to allow you to refer to the chapter further down the writing.
 
-\item \texttt{/05\_Appendix} -- The appendix folder works in the same fashion as the chapter folder. Separate files for each appendix should be created and edited.
+\item \texttt{/05-Appendix} -- The appendix folder works in the same fashion as the chapter folder. Separate files for each appendix should be created and edited.
 \end{itemize}
 
 \subsection{The {\normalfont\texttt{/figures}} folder} %\normalfont to avoid a warning
@@ -67,7 +67,7 @@ All graphics to be included in the main document should be placed inside this fo
 
 \subsection{The {\normalfont\texttt{/bib}} folder} %\normalfont to avoid a warning
 
-Finally, the bibliography is handled by the \texttt{/bib} folder. Inside you will find the bibliography file \texttt{my\_ref.bib} where all the references should be placed. The bibliography entries may have a format similar to:
+Finally, the bibliography is handled by the \texttt{/bib} folder. Inside you will find the file \texttt{msc-bibliography.bib} where all the references should be placed. The bibliography entries may have a format similar to:
 
 \begin{verbatim}
 @article{Einstein:1905,
