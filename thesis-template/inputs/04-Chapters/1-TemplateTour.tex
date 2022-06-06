@@ -7,7 +7,7 @@ The remainder of this chapter contains a description of the project structure, a
 
 
 %----------------------------------
-\section{Document structure}
+\section{Project structure}
 
 This thesis template is separated into several files for easy editing. The \texttt{main.tex} file serves as the base document from where all other files are inserted. In the main folder you can find 4 separate folders.
 
@@ -24,6 +24,7 @@ The \texttt{/config} folder contains two configuration files that should be edit
 	%\item \Verb*|\DeclareMathSizes{<tfs>}{<ts>}{<ss>}{<sss>}| is called to set the size of math mode, both in equations and inline, such as $\sqrt{x\upp{2} + 1}$, $f\sub{p/h}(x, Q\upp{2})$, or $\tau\ind{-1}{\sf form} \propto z \,\theta\upp{2}$. The arguments are respectively the size of surrounding text, the size for math mode, the size of subscripts, and the size of subsubscripts. It must be called twice, with \verb+<tfs>+ larger and smaller than the font size used in the document.
 	\item \Verb*|\hypersetup| is called to set the options for hyperlinks inside the document (this includes e.g. the colour of references).
 	\item \Verb*|\captionsetup{width=.85\textwidth}| is called to define the width of captions.
+	\item The \Verb*|openright| class option makes sure that the chapters start on odd-numbered pages. The \Verb*|emptypage| package ensures that the blank pages are not numbered. Some blank pages had to be manually included to make sure the first chapter starts on the right hand side of the spread (on the front page of each leaf).
 \end{itemize}
 
 
@@ -43,7 +44,15 @@ After the document is configured, the actual writing can begin. In the \texttt{/
 \begin{itemize}
 \item \texttt{/01-Cover-Page} -- A cover according to \textit{IST} regulations. The names of the author, supervisors, and committee members must be added, as well as the name of the degree. You can also choose a cover image.
 
-\item \texttt{/02-Front-Matter} -- The Front Matter of a thesis is composed of the \textit{Dedication}, \textit{Acknowledgements}, \textit{Abstract} and \textit{Resumo} files. In the \textit{Dedication} file you may dedicate the thesis to someone or write a quote. The \textit{Acknowledgements} page allow you to acknowledge a funding grant, some organisation, or people whose importance to you and your work should be mentioned. The \textit{Abstract} and \textit{Resumo} pages should be essentially the same (albeit in different languages) and should contain a brief summary of your work. Since the character limit is identical for both languages, it may be useful to have slightly different texts in the \textit{Abstract} and \textit{Resumo} chapters.
+\item \texttt{/02-Front-Matter} -- The Front Matter of a thesis is composed of the \textit{Dedication}, \textit{Acknowledgements}, \textit{Abstract} and \textit{Resumo} files. Although these are included in the \textit{Table of Contents}, they can be removed by commenting out the \Verb*|\addcontentsline{toc}{chapter}{<Name>}| line in the respective files.
+	
+\begin{itemize}
+	\item In the \textit{Dedication} file you may dedicate the thesis to someone or write a quote. 
+	
+	\item The \textit{Acknowledgements} page allow you to acknowledge a funding grant, some organisation, or people whose importance to you and your work should be mentioned. 
+	
+	\item The \textit{Abstract} and \textit{Resumo} pages should be essentially the same (albeit in different languages) and should contain a brief summary of your work. Since the character limit is identical for both languages, it may be useful to have slightly different texts in the \textit{Abstract} and \textit{Resumo} chapters. 
+\end{itemize}	
 
 \item \texttt{/03-Glossary-and-Nomenclature} -- The \textit{List of Abbreviations}/\textit{Glossary} pages should contain important acronyms that you use throughout the thesis. You may also include mathematical symbols to form a \textit{List of Symbols}/\textit{Nomenclature} page, although this is not mandatory. Special care must be taken when compiling these sections, as described below.
 

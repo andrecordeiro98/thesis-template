@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper,twoside]{report}
+\documentclass[10pt,a4paper,twoside,openright]{report}
 
 % Commands
 \input{thesis-template/config/my-commands.tex}
@@ -28,8 +28,8 @@ pdftitle={},%
 % FRONT MATTER
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\pagestyle{plain}
-\pagenumbering{roman}
+%\pagestyle{plain}
+
 
 % ----------------------------------------------------------------------
 %  Cover , Dedication and Acknowledgements pages
@@ -38,17 +38,19 @@ pdftitle={},%
 %Cover page
 \input{thesis-template/inputs/01-Cover-Page/thesis-front-cover}
 \null\newpage
-\null\newpage
+\thispagestyle{empty} \null\newpage~ % Backside of the cover should be blank
+
+\setcounter{page}{1}
+\pagenumbering{roman}
 
 %Dedication page
 \input{thesis-template/inputs/02-Front-Matter/Dedication} 
-%\cleardoublepage
-\null\newpage
+\cleardoublepage % Dedication has its own spread
+
 
 %Acknowledgments page
 \input{thesis-template/inputs/02-Front-Matter/Acknowledgements}
-%\cleardoublepage
-\null\newpage
+\clearpage
 
 % ----------------------------------------------------------------------
 %  %Abstract in mother language and English
@@ -56,13 +58,11 @@ pdftitle={},%
 
 %Mother language
 \input{thesis-template/inputs/02-Front-Matter/Resumo}   
-%\cleardoublepage
-\null\newpage
+\clearpage
 
 %English
-\input{thesis-template/inputs/02-Front-Matter/Abstract} 
-%\cleardoublepage
-\null\newpage
+\input{thesis-template/inputs/02-Front-Matter/Abstract}
+\clearpage
 
 
 % ----------------------------------------------------------------------
@@ -81,18 +81,15 @@ pdftitle={},%
 \tableofcontents%
 }
 \null\newpage
-%\null\newpage
+
 
 % -------------------
 % List of tables
 \phantomsection
-%\addcontentsline{toc}{section}{\listtablename}
 \addcontentsline{toc}{chapter}{\listtablename}
 {\hypersetup{linkcolor=black}% Set these links to black
 \listoftables%
 }
-\null\newpage
-%\null\newpage
 
 % -------------------
 % List of figures
@@ -101,8 +98,6 @@ pdftitle={},%
 {\hypersetup{linkcolor=black}% Set these links to black
 \listoffigures%
 }
-\null\newpage
-%\null\newpage
 
 % -------------------
 % Nomenclature
@@ -113,8 +108,8 @@ pdftitle={},%
 \printnomenclature
 % Set up for the table of contents (TOC) entries
 \addcontentsline{toc}{chapter}{\nomname}
-%\null\newpage
 
+% -------------------
 %Glossary
 \renewcommand{\glossaryname}{List of Abbreviations}
 \phantomsection
@@ -125,7 +120,7 @@ pdftitle={},%
 % Set up for the table of contents (TOC) entries
 \addcontentsline{toc}{chapter}{\glossaryname}
 
-\null\newpage\null\newpage
+\cleardoublepage % To make sure that the first chapter starts on the right page
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % MAIN MATTER
@@ -139,14 +134,8 @@ pdftitle={},%
 % ----------------------------------------------------------------------
 
 \input{thesis-template/inputs/04-Chapters/1-TemplateTour}
-\null\newpage
-%\null\newpage
 
 \input{thesis-template/inputs/04-Chapters/2-SampleChapter}
-\null\newpage
-%\null\newpage
-
-
 
 
 % ----------------------------------------------------------------------
@@ -159,7 +148,6 @@ pdftitle={},%
 %\nocite{*}
 
 \printbibliography
-\null\newpage\null\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % AFTER MATTER
@@ -167,11 +155,8 @@ pdftitle={},%
 \appendix
 
 \input{thesis-template/inputs/05-Appendix/A-Appendix}
-\null\newpage
 
-% Last page intentionally left blank
-\thispagestyle{empty}
-\null\newpage
+
 
 
 \end{document}
