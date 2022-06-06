@@ -205,6 +205,13 @@
 	<->cmbrbx10
 }{}
 
+%--------------------------
+% Math typset inside bold text is automatically bold
+% This should be the default behaviour!
+
+\makeatletter
+\g@addto@macro\bfseries{\boldmath}
+\makeatother
 
 
 
