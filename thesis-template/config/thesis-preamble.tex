@@ -58,10 +58,11 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% DOCUMENT SETUP
+% LAYOUT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%Paper Geometry
+%--------------------------
+% Paper Geometry
 \geometry{
 	paper=a4paper, 	% A4 Paper
 	inner=2.5cm, 	% Inner margin
@@ -70,8 +71,50 @@
 	bottom=2.5cm, 	% Bottom margin
 }
 
-%Line spacing
+%--------------------------
+% Line spacing - according to regulations
 \setstretch{1.5}
+
+%--------------------------
+% All blank space is sent to the bottom of the page
+\raggedbottom
+
+
+%--------------------------
+%Make tables align at the separator '.'
+\usepackage{dcolumn}
+\newcolumntype{d}{D{.}{.}{-1}}
+
+%--------------------------
+%URL links setup
+\colorlet{url-blue}{blue!70!black}
+
+\hypersetup{
+	%pdftitle            = {Thesis Title},
+	pdfpagemode			= {UseOutlines}	,
+	bookmarksopen		= true 			,
+	bookmarksopenlevel	= 0				,
+	hypertexnames		= false			,
+	colorlinks			= true			, % Set to false to disable coloring links
+	citecolor			= blue			, % The color of citations
+	linkcolor			= blue			, % The color of references to document(sections, figures, etc)
+	urlcolor			= url-blue		, % The color of hyperlinks (URLs)
+	pdfstartview		= {FitV}			,
+	breaklinks			= true,
+	unicode								,
+}
+
+%--------------------------
+%Setup sidecaption aligned to top of figure and caption width
+\sidecaptionvpos{figure}{t}
+\captionsetup{width=.85\textwidth}
+%\captionsetup{width=.95\textwidth}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FONTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % ---------------------------
 % SELECT THE MATH FONT
@@ -100,14 +143,6 @@
 \def\FontSn{% 12 pt normal
 	\usefont{T1}{\fontnamestring}{m}{n}\fontsize{12pt}{12pt}\selectfont}
 
-
-
-
-%------------------------
-%-------- MINE ----------
-%------------------------
-%No adjustment, all blank space is sent to the bottom of the page
-\raggedbottom
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -169,45 +204,10 @@
 	<->cmbrbx10
 }{}
 
-%--------------------------
-
-
-
-
-%------------------------
-%------------------------
-
-
-%Make tables align at the separator '.'
-\usepackage{dcolumn}
-\newcolumntype{d}{D{.}{.}{-1}}
-
-%URL links setup
-\colorlet{url-blue}{blue!70!black}
-
-\hypersetup{
-    %pdftitle            = {Thesis Title},
-	pdfpagemode			= {UseOutlines}	,
-	bookmarksopen		= true 			,
-	bookmarksopenlevel	= 0				,
-	hypertexnames		= false			,
-	colorlinks			= true			, % Set to false to disable coloring links
-	citecolor			= blue			, % The color of citations
-	linkcolor			= blue			, % The color of references to document(sections, figures, etc)
-	urlcolor			= url-blue		, % The color of hyperlinks (URLs)
-	pdfstartview		= {FitV}			,
-	breaklinks			= true,
-	unicode								,
-}
-
-%Setup sidecaption aligned to top of figure and caption width
-\sidecaptionvpos{figure}{t}
-\captionsetup{width=.85\textwidth}
-%\captionsetup{width=.95\textwidth}
 
 
 %Set shaded color
-\definecolor{shadecolor}{rgb}{0.8,0.8,0.8}
+%\definecolor{shadecolor}{rgb}{0.8,0.8,0.8}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % COVER PAGE TOOLS
