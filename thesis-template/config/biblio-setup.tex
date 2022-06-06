@@ -73,5 +73,10 @@
 }
 
 \DeclareFieldFormat{title}{\usebibmacro{string+doiurlisbn}{\mkbibemph{#1}}}
-\DeclareFieldFormat[article,incollection]{title}{\usebibmacro{string+doiurlisbn}{\mkbibquote{#1}}}
+
+\DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,unpublished]{title}{\usebibmacro{string+doiurlisbn}{\mkbibquote{#1}}}
+
+\DeclareFieldFormat[suppbook,suppcollection,suppperiodical]{title}{\usebibmacro{string+doiurlisbn}{#1}}
+
+
 
