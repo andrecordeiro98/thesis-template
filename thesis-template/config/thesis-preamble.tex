@@ -21,6 +21,7 @@
 \usepackage{sidecap}					% Side captions (just in case)
 
 \pdfsuppresswarningpagegroup=1			% This just suppresses an annoying (and meaningless) warning
+\pdfminorversion=7						% Allows output to be PDF version 1.7
 
 %ThE LooOks!
 \usepackage{emptypage}					% No numbering on empty pages
@@ -40,7 +41,7 @@
 \usepackage{physics}					% Useful notations (bras and kets for example)
 
 % Useful Tools
-\usepackage{lipsum}						% Create random text
+\usepackage[auto-lang=false]{lipsum}	% Create random text
 \usepackage{comment}					% Create comments
 \usepackage{xcolor} 					% Colors
 \usepackage[dvipsnames]{xcolor} 		% Better Colors
@@ -80,6 +81,9 @@
 % All blank space is sent to the bottom of the page
 \raggedbottom
 
+%--------------------------
+% Controls footnote size:
+\renewcommand{\footnotesize}{\small}
 
 %--------------------------
 %Make tables align at the separator '.'
@@ -223,14 +227,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %new Latex variable names
-\newcommand{\coverThesis}{@undefined} 
+\newcommand{\coverThesisMSc}{@undefined} 
+\newcommand{\coverThesisPhD}{@undefined} 
 \newcommand{\coverSupervisors}{@undefined}
 \newcommand{\coverExaminationCommittee}{@undefined}
 \newcommand{\coverChairperson}{@undefined} 
 \newcommand{\coverSupervisor}{@undefined} 
 \newcommand{\coverMemberCommittee}{@undefined} 
 
-\addto\captionsenglish{\renewcommand{\coverThesis}{Thesis to obtain the Master of Science Degree in}}
+\addto\captionsenglish{\renewcommand{\coverThesisMSc}{Thesis to obtain the Master of Science Degree in}}
+\addto\captionsenglish{\renewcommand{\coverThesisPhD}{Thesis to obtain the Doctoral Degree in}}
 \addto\captionsenglish{\renewcommand{\coverSupervisors}{Supervisors}}
 \addto\captionsenglish{\renewcommand{\coverExaminationCommittee}{Examination Committee}}
 \addto\captionsenglish{\renewcommand{\coverChairperson}{Chairperson}}

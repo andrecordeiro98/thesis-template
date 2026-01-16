@@ -19,12 +19,12 @@ The \texttt{/config} folder contains two configuration files that should be edit
 \item \texttt{thesis-preamble.tex} -- Contains all packages required by the template as well as some useful ones for writing mathematical expressions, defining tables and including figures. It also contains the commands for setting up the thesis geometry and looks.
 
 \begin{itemize}
-	\item \Verb*|\usepackage[labelfont=bf,font=small]{caption}| is used to set the ``\textbf{Figure X.Y:}'' to be in boldface. Same is done for subcaptions.
-	\item \Verb*|\usepackage{cmbright}| and \Verb*|\newcommand{\fontnamestring}{cmbr}| are done to set the font to Computer Modern Bright for both math mode and normal text.
-	%\item \Verb*|\DeclareMathSizes{<tfs>}{<ts>}{<ss>}{<sss>}| is called to set the size of math mode, both in equations and inline, such as $\sqrt{x\upp{2} + 1}$, $f\sub{p/h}(x, Q\upp{2})$, or $\tau\ind{-1}{\sf form} \propto z \,\theta\upp{2}$. The arguments are respectively the size of surrounding text, the size for math mode, the size of subscripts, and the size of subsubscripts. It must be called twice, with \verb+<tfs>+ larger and smaller than the font size used in the document.
-	\item \Verb*|\hypersetup| is called to set the options for hyperlinks inside the document (this includes e.g. the colour of references).
-	\item \Verb*|\captionsetup{width=.85\textwidth}| is called to define the width of captions.
-	\item The \Verb*|openright| class option makes sure that the chapters start on odd-numbered pages. The \Verb*|emptypage| package ensures that the blank pages are not numbered. Some blank pages had to be manually included to make sure the first chapter starts on the right hand side of the spread (on the front page of each leaf).
+	\item \verb|\usepackage[labelfont=bf,font=small]{caption}| is used to set ``\textbf{Figure X.Y:}'' to boldface. Same is done for subcaptions.
+	\item \verb|\usepackage{cmbright}| and \verb|\newcommand{\fontnamestring}{cmbr}| are done to set the font to Computer Modern Bright for both math mode and normal text.
+	%\item \texttt{\textbackslash DeclareMathSizes{<tfs>}{<ts>}{<ss>}{<sss>}} is called to set the size of math mode, both in equations and inline, such as $\sqrt{x\upp{2} + 1}$, $f\sub{p/h}(x, Q\upp{2})$, or $\tau\ind{-1}{\sf form} \propto z \,\theta\upp{2}$. The arguments are respectively the size of surrounding text, the size for math mode, the size of subscripts, and the size of subsubscripts. It must be called twice, with \verb+<tfs>+ larger and smaller than the font size used in the document.
+	\item \verb|\hypersetup| is called to set the options for hyperlinks inside the document (this includes e.g. the colour of references).
+	\item \verb|\captionsetup{width=.85\textbackslash textwidth}| is called to define the width of captions.
+	\item The \texttt{openright} class option makes sure that the chapters start on odd-numbered pages. The \texttt{emptypage} package ensures that the blank pages are not numbered. Some blank pages had to be manually included to make sure the first chapter starts on the right hand side of the spread (on the front page of each leaf). To check how this will look when printed, select \textbf{``two page view (even spreads)''} in your pdf viewer.
 \end{itemize}
 
 
@@ -32,7 +32,7 @@ The \texttt{/config} folder contains two configuration files that should be edit
 
 \item \texttt{biblio-setup.tex} -- Defines the bibliography style as it appears on this \texttt{.pdf}.
 \begin{itemize}
-	\item \Verb*|\usepackage[<options>]{biblatex}| is called to configure the bibliography. Check these options carefully, reading the comments to each portion of the code.
+	\item \verb|\usepackage[<options>]{biblatex}| is called to configure the bibliography. Check these options carefully, reading the comments to each portion of the code.
 \end{itemize}
 
 \end{itemize}
@@ -42,9 +42,9 @@ The \texttt{/config} folder contains two configuration files that should be edit
 After the document is configured, the actual writing can begin. In the \texttt{/input} folder you will find several folders with several documents inside:
 
 \begin{itemize}
-\item \texttt{/01-Cover-Page} -- A cover according to \textit{IST} regulations. The names of the author, supervisors, and committee members must be added, as well as the name of the degree. You can also choose a cover image.
+\item \texttt{/01-Cover-Page} -- A cover according to \textit{IST} regulations. The names of the author, supervisors, and committee members must be added, as well as the name of the degree. You can also choose a cover image. When announcing the name of the degree, user must choose between \verb|\coverThesisMSc| and \verb|\coverThesisPhD|.
 
-\item \texttt{/02-Front-Matter} -- The Front Matter of a thesis is composed of the \textit{Dedication}, \textit{Acknowledgements}, \textit{Abstract} and \textit{Resumo} files. Although these are included in the \textit{Table of Contents}, they can be removed by commenting out the \Verb*|\addcontentsline{toc}{chapter}{<Name>}| line in the respective files. They can also be formatted as sections by changing \Verb*|\chapter*{<Name>}| to \Verb*|\section*{<Name>}|.
+\item \texttt{/02-Front-Matter} -- The Front Matter of a thesis is composed of the \textit{Dedication}, \textit{Acknowledgements}, \textit{Abstract} and \textit{Resumo} files. Although these are included in the \textit{Table of Contents}, they can be removed by commenting out the \verb|\addcontentsline{toc}{chapter}{<Name>}| line in the respective files. They can also be formatted as sections by changing \verb|\chapter*{<Name>}| to \verb|\section*{<Name>}|.
 	
 \begin{itemize}
 	\item In the \textit{Dedication} file you may dedicate the thesis to someone or write a quote. 
