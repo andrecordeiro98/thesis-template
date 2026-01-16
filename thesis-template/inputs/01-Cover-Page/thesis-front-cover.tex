@@ -5,8 +5,10 @@
 
 \thispagestyle{empty} % No pagenumber
 
-%IST Logo
+% This makes sure we respect the margins
+\begin{flushleft}
 \includegraphics[viewport=4.5cm 10cm 0cm 0cm,scale=0.25]{thesis-template/inputs/01-Cover-Page/IST-CMYK.pdf}
+\end{flushleft}
 
 
 \begin{center}
@@ -14,12 +16,12 @@
 
 %----------------------------------
 % Figure (Image or plot)
-\vspace{.10\textheight}
+% OPTIONAL
+\vspace{.15\textheight}
 \begin{center}
 \includegraphics[height=.15\textheight]{thesis-template/inputs/01-Cover-Page/solomon}
+%\includegraphics[height=0.15\textheight,width=.95\linewidth]{example-image-a}
 \end{center}
-\vspace{.025\textheight}
-
 %Because I don't have a figure
 %\vspace{.15\textheight}
 
@@ -27,9 +29,9 @@
 %----------------------------------
 % Thesis Title
 \vspace{1.0cm}
-{\FontLb [MSc Thesis Title]} \\ 
+{\FontLb [Thesis Title]} \\ 
 \vspace{1.0cm}
-{\FontMn [MSc Thesis Subtitle]} \\
+{\FontMn [Thesis Subtitle (Optional)]} \\
 \vspace{1.0cm}
 
 %Author name
@@ -38,7 +40,9 @@
 
 %Degree
 \vspace{1.0cm}
+% WARNING: PICK ONE:
 {\FontSn \coverThesisPhD} \\
+%{\FontSn \coverThesisMSc} \\
 \vspace{0.3cm}
 {\FontLb [Degree Name]}  \\
 
