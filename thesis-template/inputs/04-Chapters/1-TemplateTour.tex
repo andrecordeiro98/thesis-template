@@ -42,7 +42,16 @@ The \texttt{/config} folder contains two configuration files that should be edit
 After the document is configured, the actual writing can begin. In the \texttt{/input} folder you will find several folders with several documents inside:
 
 \begin{itemize}
-\item \texttt{/01-Cover-Page} -- A cover according to \textit{IST} regulations. The names of the author, supervisors, and committee members must be added, as well as the name of the degree. You can also choose a cover image. When announcing the name of the degree, user must choose between \verb|\coverThesisMSc| and \verb|\coverThesisPhD|.
+\item \texttt{/01-Cover-Page} -- A cover according to \textit{IST} regulations. The names of the author, supervisors, and committee members must be added, as well as the name of the degree. You can also choose a cover image. Choose one of the following files:
+\begin{itemize}
+	\item \texttt{thesis-front-cover-msc-en}: My attempt at a MSc compliant cover (unsure of the regulations).
+	\item \texttt{thesis-front-cover-phd-double-degree}: For your draft (used during the defense). Includes both an optional image and the logo of an external university, in case of a double degree.
+	\item \texttt{thesis-front-cover-phd-double-degree-definitive}: One of the definitive covers. Includes the classification awarded by the jury. Includes an optional image.
+	\item \texttt{thesis-front-cover-phd-double-degree-definitive-juryname}: The other definitive cover. Includes the classification awarded by the jury. Includes the name of the jury committee members and funding information, but no optional image.
+\end{itemize}
+
+
+%When announcing the name of the degree, user must choose between \verb|\coverThesisMSc| and \verb|\coverThesisPhD|.
 
 \item \texttt{/02-Front-Matter} -- The Front Matter of a thesis is composed of the \textit{Dedication}, \textit{Acknowledgements}, \textit{Abstract} and \textit{Resumo} files. Although these are included in the \textit{Table of Contents}, they can be removed by commenting out the \verb|\addcontentsline{toc}{chapter}{<Name>}| line in the respective files. They can also be formatted as sections by changing \verb|\chapter*{<Name>}| to \verb|\section*{<Name>}|.
 	

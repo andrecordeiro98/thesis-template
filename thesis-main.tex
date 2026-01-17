@@ -1,5 +1,5 @@
-\documentclass[10pt,a4paper,twoside,openright]{report}
-
+%\documentclass[10pt,a4paper,twoside,openright]{report}
+\documentclass[10pt,a4paper,twoside,openright]{book}
 
 % Commands
 \input{thesis-template/config/my-commands.tex}
@@ -36,13 +36,19 @@ pdftitle={},%
 %  Cover , Dedication and Acknowledgements pages
 % ----------------------------------------------------------------------
 
-%Cover page
-\input{thesis-template/inputs/01-Cover-Page/thesis-front-cover}
-\null\newpage
-\thispagestyle{empty} \null\newpage~ % Backside of the cover should be blank
+\frontmatter
 
-\setcounter{page}{1}
-\pagenumbering{roman}
+%Cover pages
+%\input{thesis-template/inputs/01-Cover-Page/thesis-front-cover-msc-en}
+\input{thesis-template/inputs/01-Cover-Page/thesis-front-cover-phd-double-degree}
+\input{thesis-template/inputs/01-Cover-Page/thesis-front-cover-phd-double-degree-definitive}
+\input{thesis-template/inputs/01-Cover-Page/thesis-front-cover-phd-double-degree-definitive-juryname}
+
+%\thispagestyle{empty} \null\clearpage
+%\thispagestyle{empty} \null\clearpage % Backside of the cover should be blank
+
+%\setcounter{page}{1}
+%\pagenumbering{roman}
 
 %Dedication page
 \input{thesis-template/inputs/02-Front-Matter/Dedication} 
@@ -127,8 +133,9 @@ pdftitle={},%
 % MAIN MATTER
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\setcounter{page}{1}
-\pagenumbering{arabic}
+\mainmatter
+%\setcounter{page}{1}
+%\pagenumbering{arabic}
 
 % ----------------------------------------------------------------------
 %  Chapters
@@ -139,6 +146,12 @@ pdftitle={},%
 \input{thesis-template/inputs/04-Chapters/2-SampleChapter}
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AFTER MATTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\backmatter
 % ----------------------------------------------------------------------
 %  Bibliography
 % ----------------------------------------------------------------------
@@ -150,9 +163,10 @@ pdftitle={},%
 
 \printbibliography
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% AFTER MATTER
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ----------------------------------------------------------------------
+%  Appendices
+% ----------------------------------------------------------------------
+
 \appendix
 
 \input{thesis-template/inputs/05-Appendix/A-Appendix}

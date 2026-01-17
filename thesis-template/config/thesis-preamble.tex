@@ -73,6 +73,12 @@
 	bottom=2.5cm, 	% Bottom margin
 }
 
+% -------------------------
+% Makes sure there are no headers, according to regulation
+\pagestyle{plain}
+\fancyfoot[C]{\thepage}
+
+
 %--------------------------
 % Line spacing - according to regulations
 \setstretch{1.5}
@@ -147,7 +153,8 @@
 	\usefont{T1}{\fontnamestring}{b}{n}\fontsize{14pt}{14pt}\selectfont}
 \def\FontSn{% 12 pt normal
 	\usefont{T1}{\fontnamestring}{m}{n}\fontsize{12pt}{12pt}\selectfont}
-
+\def\FontSb{% 12 pt normal
+	\usefont{T1}{\fontnamestring}{b}{n}\fontsize{12pt}{12pt}\selectfont}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -236,7 +243,8 @@
 \newcommand{\coverMemberCommittee}{@undefined} 
 
 \addto\captionsenglish{\renewcommand{\coverThesisMSc}{Thesis to obtain the Master of Science Degree in}}
-\addto\captionsenglish{\renewcommand{\coverThesisPhD}{Thesis to obtain a Doctoral Degree in}}
+\addto\captionsenglish{\renewcommand{\coverThesisPhD}{Thesis specifically prepared to obtain the PhD Degree in}}
+
 \addto\captionsenglish{\renewcommand{\coverSupervisors}{Supervisors}}
 \addto\captionsenglish{\renewcommand{\coverExaminationCommittee}{Examination Committee}}
 \addto\captionsenglish{\renewcommand{\coverChairperson}{Chairperson}}
