@@ -3,6 +3,8 @@
 ~
 This template is intended for use in Master's Theses at \textit{Instituto Superior Técnico}, and is in accordance with the guidelines in the \textit{Guia de Preparação da Dissertação 2015/16} (the most recent at time of writing). The current version is an adaptation of the templates developed and used by former MEFT students Pedro Cosme, Diogo Ribeiro, and André Cordeiro. André Cordeiro is responsible for the most recent changes to this version, especially with regards to the \textit{List of Symbols}, the disposition of the ``Sample Chapter'' \ref{chapter:SampleChapter}, and the configuration of the \textit{Bibliography} (mainly the hyperlinks).
 
+A more recent addition has overhauled the cover pages, to make them compliant with the templates provided in \href{https://posgraduacao.tecnico.ulisboa.pt/programas-doutorais/provas-academicas/}{\textit{Área de Pós-Graduação}}. Nonetheless, clarifications are needed regarding type size (currently 10pt) and how to use the covers.
+
 The remainder of this chapter contains a description of the project structure, along with some noteworthy commands that may be edited to taste. Nonetheless, the user should read the configuration files (or \texttt{Ctrl + F} through them), in order to fine tune this template.
 
 
@@ -42,12 +44,11 @@ The \texttt{/config} folder contains two configuration files that should be edit
 After the document is configured, the actual writing can begin. In the \texttt{/input} folder you will find several folders with several documents inside:
 
 \begin{itemize}
-\item \texttt{/01-Cover-Page} -- A cover according to \textit{IST} regulations. The names of the author, supervisors, and committee members must be added, as well as the name of the degree. You can also choose a cover image. Choose one of the following files:
+\item \texttt{/01-Cover-Page} -- Covers according to \textit{IST} regulations. The names of the author, supervisors, and committee members must be added, as well as the name of the degree. You can also choose a cover image. The commands in the main text must be edited with the names of the author, supervisors, the thesis title, etc. Available:
 \begin{itemize}
-	\item \texttt{thesis-front-cover-msc-en}: My attempt at a MSc compliant cover (unsure of the regulations).
-	\item \texttt{thesis-front-cover-phd-double-degree}: For your draft (used during the defense). Includes both an optional image and the logo of an external university, in case of a double degree.
-	\item \texttt{thesis-front-cover-phd-double-degree-definitive}: One of the definitive covers. Includes the classification awarded by the jury. Includes an optional image.
-	\item \texttt{thesis-front-cover-phd-double-degree-definitive-juryname}: The other definitive cover. Includes the classification awarded by the jury. Includes the name of the jury committee members and funding information, but no optional image.
+	\item \texttt{thesis-front-cover-draft}: For your draft (used during the defense). Includes both an optional image and the logo of an external university, in case of a double degree.
+	\item \texttt{thesis-front-cover-definitive-1}: Page 1 of the definitive covers. Includes the classification awarded by the jury. Includes an optional image.
+	\item \texttt{thesis-front-cover-definitive-2}: Page 2 of the definitive covers. Includes the classification awarded by the jury. Includes the names of the jury committee members and funding information, but no optional image.
 \end{itemize}
 
 

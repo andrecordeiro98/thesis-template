@@ -39,14 +39,39 @@ pdftitle={},%
 \frontmatter
 
 %Cover pages
-%\input{thesis-template/inputs/01-Cover-Page/thesis-front-cover-msc-en}
-\input{thesis-template/inputs/01-Cover-Page/thesis-front-cover-phd-double-degree}
-\input{thesis-template/inputs/01-Cover-Page/thesis-front-cover-phd-double-degree-definitive}
-\input{thesis-template/inputs/01-Cover-Page/thesis-front-cover-phd-double-degree-definitive-juryname}
 
-%\thispagestyle{empty} \null\clearpage
-%\thispagestyle{empty} \null\clearpage % Backside of the cover should be blank
+% Define some commands, for convenience:
+\newcommand{\thesistitlePT}{[Título da Tese]}
+\newcommand{\thesistitleEN}{[Thesis Title]}
 
+\newcommand{\authorname     }{[Author's Full Name]}
+
+\newcommand{\supervisortitle  }{\textbf{Orientador(a)} \textit{(Supervisor)}}
+\newcommand{\cosupervisortitle}{\textbf{Coorientadores} \textit{(Co-supervisor)}}
+
+\newcommand{\supervisor     }{\textbf{Doutor(a)} \textit{(Doctor)} [Supervisor's Full Name]}
+\newcommand{\cosupervisorA  }{\textbf{Doutor(a)} \textit{(Doctor)} [Co-supervisor's Full Name]}
+\newcommand{\cosupervisorB  }{\textbf{Doutor(a)} \textit{(Doctor)} [Co-supervisor's Full Name]}
+
+\newcommand{\descriptionThesisDraftPT}{Tese especialmente elaborada para obtenção do Grau de Doutor em}
+\newcommand{\descriptionThesisDraftEN}{Thesis specifically prepared to obtain the PhD Degree in}
+
+\newcommand{\descriptionThesisPT}{Tese aprovada em provas públicas para obtenção do Grau de Doutor em}
+\newcommand{\descriptionThesisEN}{Thesis approved in public session to obtain the PhD Degree in}
+
+\newcommand{\scientificfieldPT}{(Ramo do conhecimento)}
+\newcommand{\scientificfieldEN}{(Scientific area)}
+
+\newcommand{\MonthYearPT}{[Mês e Ano]}
+\newcommand{\MonthYearEN}{[Month and Year]}
+
+\newcommand{\Year}{[Ano]}
+
+\input{thesis-template/inputs/01-Cover-Page/thesis-front-cover-phd-draft}
+\input{thesis-template/inputs/01-Cover-Page/thesis-front-cover-phd-definitive-1}
+\input{thesis-template/inputs/01-Cover-Page/thesis-front-cover-phd-definitive-2}
+
+\pagestyle{plain}
 %\setcounter{page}{1}
 %\pagenumbering{roman}
 
@@ -136,6 +161,8 @@ pdftitle={},%
 \mainmatter
 %\setcounter{page}{1}
 %\pagenumbering{arabic}
+\thispagestyle{plain}
+
 
 % ----------------------------------------------------------------------
 %  Chapters

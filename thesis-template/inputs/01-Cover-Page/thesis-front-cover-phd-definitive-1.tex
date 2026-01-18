@@ -1,0 +1,92 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COVER PAGE OF MASTER/PHD THESIS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+
+% This makes sure we respect the margins
+\begin{figure}
+\includegraphics[height=3.00cm]{thesis-template/inputs/01-Cover-Page/IST-CMYK.pdf}
+\hfill
+\includegraphics[height=3.00cm]{example-image-a} % Logo of external university, if applicable
+\end{figure}
+
+
+
+\begin{center}
+
+\FontLb{UNIVERSIDADE DE LISBOA} 
+\\ \FontLb{INSTITUTO SUPERIOR TÉCNICO}
+\\ \FontLb{[EXTERNAL UNIVERSITY NAME (IF APPLICABLE)]}
+
+
+%----------------------------------
+% Figure (Image or plot)
+% OPTIONAL
+\vspace{0.50cm}
+\begin{center}
+	%\includegraphics[height=.10\textheight,width=\textwidth]{example-image}
+	\includegraphics[height=.10\textheight]{thesis-template/inputs/01-Cover-Page/optional-figure.png}
+\end{center}
+
+\vspace{0.50cm}
+
+%----------------------------------
+% Thesis Title
+%----------------------------------
+% Thesis Title
+{\FontLb \thesistitlePT} \\ 
+{\FontLn \it \thesistitleEN} \\ 
+
+\vspace{0.50cm}
+
+%----------------------------------
+% Author name
+{\FontMb \authorname} \\ 
+
+\vspace{1.00cm}
+
+%----------------------------------
+% Orientadores / Supervisors
+{\FontSn %
+	\setlength{\tabcolsep}{3pt} % This may help control the spacing between table entries
+	\begin{tabular}{rl}
+		\supervisortitle:			
+		& \supervisor \\
+		% -------------------------
+		\cosupervisortitle:	
+		& \cosupervisorA   \\
+		& \cosupervisorB
+	\end{tabular} 
+}
+
+
+\vspace{0.50cm}
+
+%----------------------------------
+% Degree Name
+
+\FontSb{\descriptionThesisPT \\ \scientificfieldPT}
+
+\FontSn{\textit{\descriptionThesisEN} \\ \textit{\scientificfieldEN}}
+
+\vspace{0.50cm}
+
+\FontSb{Qualificação atribuída pelo Júri: [Classificação]}
+
+\FontSn{\textit{Jury classification: [Classification] } }
+
+\vfill
+
+% ----------------------------------
+% Date of Defense
+
+\FontSb{\Year}
+	
+\end{center}
+
+\end{titlepage}
+
+% Make sure the next page is empty
+%\clearpage\null\pagestyle{empty}\clearpage

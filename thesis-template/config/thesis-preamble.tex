@@ -27,6 +27,7 @@
 \usepackage{emptypage}					% No numbering on empty pages
 \usepackage{fancyhdr}					% Fancy Headers
 \usepackage{geometry}					% Control geometry
+%\usepackage[showframe]{geometry}		% Control geometry (show the page frame)
 \usepackage{setspace}
 \usepackage[bottom,para]{footmisc}      %Send footnotes to the bottom of the page
 
@@ -89,6 +90,7 @@
 
 %--------------------------
 % Controls footnote size:
+%\renewcommand{\footnotesize}{\fontsize{10pt}{10pt}}
 \renewcommand{\footnotesize}{\small}
 
 %--------------------------
@@ -144,16 +146,33 @@
 \renewcommand{\sfdefault}{\fontnamestring}
 
 \def\FontLn{% 16 pt normal
-	\usefont{T1}{\fontnamestring}{m}{n}\fontsize{16pt}{16pt}\selectfont}
+	\usefont{T1}{\fontnamestring}{m}{n}\fontsize{18pt}{18pt}\selectfont}
 \def\FontLb{% 16 pt bold
-	\usefont{T1}{\fontnamestring}{b}{n}\fontsize{16pt}{16pt}\selectfont}
+	\usefont{T1}{\fontnamestring}{b}{n}\fontsize{18pt}{18pt}\selectfont}
 \def\FontMn{% 14 pt normal
 	\usefont{T1}{\fontnamestring}{m}{n}\fontsize{14pt}{14pt}\selectfont}
 \def\FontMb{% 14 pt bold
 	\usefont{T1}{\fontnamestring}{b}{n}\fontsize{14pt}{14pt}\selectfont}
 \def\FontSn{% 12 pt normal
-	\usefont{T1}{\fontnamestring}{m}{n}\fontsize{12pt}{12pt}\selectfont}
+	\usefont{T1}{\fontnamestring}{m}{n}\fontsize{10.5pt}{10.5pt}\selectfont}
 \def\FontSb{% 12 pt normal
+	\usefont{T1}{\fontnamestring}{b}{n}\fontsize{10.5pt}{10.5pt}\selectfont}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% These were meant for the MSc cover
+
+\def\FontLnMSc{% 16 pt normal
+	\usefont{T1}{\fontnamestring}{m}{n}\fontsize{16pt}{16pt}\selectfont}
+\def\FontLbMSc{% 16 pt bold
+	\usefont{T1}{\fontnamestring}{b}{n}\fontsize{16pt}{16pt}\selectfont}
+\def\FontMnMsc{% 14 pt normal
+	\usefont{T1}{\fontnamestring}{m}{n}\fontsize{14pt}{14pt}\selectfont}
+\def\FontMbMsc{% 14 pt bold
+	\usefont{T1}{\fontnamestring}{b}{n}\fontsize{14pt}{14pt}\selectfont}
+\def\FontSnMSc{% 12 pt normal
+	\usefont{T1}{\fontnamestring}{m}{n}\fontsize{12pt}{12pt}\selectfont}
+\def\FontSbMsc{% 12 pt normal
 	\usefont{T1}{\fontnamestring}{b}{n}\fontsize{12pt}{12pt}\selectfont}
 
 
@@ -234,22 +253,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %new Latex variable names
-\newcommand{\coverThesisMSc}{@undefined} 
-\newcommand{\coverThesisPhD}{@undefined} 
-\newcommand{\coverSupervisors}{@undefined}
-\newcommand{\coverExaminationCommittee}{@undefined}
-\newcommand{\coverChairperson}{@undefined} 
-\newcommand{\coverSupervisor}{@undefined} 
-\newcommand{\coverMemberCommittee}{@undefined} 
+%\newcommand{\coverThesisMSc}{@undefined} 
+%\newcommand{\coverThesisPhD}{@undefined} 
+%\newcommand{\coverSupervisors}{@undefined}
+%\newcommand{\coverExaminationCommittee}{@undefined}
+%\newcommand{\coverChairperson}{@undefined} 
+%\newcommand{\coverSupervisor}{@undefined} 
+%\newcommand{\coverMemberCommittee}{@undefined} 
+%
+%\addto\captionsenglish{\renewcommand{\coverThesisMSc}{Thesis to obtain the Master of Science Degree in}}
+%\addto\captionsenglish{\renewcommand{\coverThesisPhD}{Thesis specifically prepared to obtain the PhD Degree in}}
+%
+%\addto\captionsenglish{\renewcommand{\coverSupervisors}{Supervisors}}
+%\addto\captionsenglish{\renewcommand{\coverExaminationCommittee}{Examination Committee}}
+%\addto\captionsenglish{\renewcommand{\coverChairperson}{Chairperson}}
+%\addto\captionsenglish{\renewcommand{\coverSupervisor}{Supervisor}}
+%\addto\captionsenglish{\renewcommand{\coverMemberCommittee}{Members of the Committee}}
 
-\addto\captionsenglish{\renewcommand{\coverThesisMSc}{Thesis to obtain the Master of Science Degree in}}
-\addto\captionsenglish{\renewcommand{\coverThesisPhD}{Thesis specifically prepared to obtain the PhD Degree in}}
 
-\addto\captionsenglish{\renewcommand{\coverSupervisors}{Supervisors}}
-\addto\captionsenglish{\renewcommand{\coverExaminationCommittee}{Examination Committee}}
-\addto\captionsenglish{\renewcommand{\coverChairperson}{Chairperson}}
-\addto\captionsenglish{\renewcommand{\coverSupervisor}{Supervisor}}
-\addto\captionsenglish{\renewcommand{\coverMemberCommittee}{Members of the Committee}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ACKNOWLEDGEMENT SECTION
