@@ -7,18 +7,18 @@
 
 % This makes sure we respect the margins
 \begin{figure}
-\includegraphics[height=3.00cm]{thesis-template/inputs/01-Cover-Page/IST-CMYK.pdf}
+\includegraphics[height=2.50cm]{thesis-template/inputs/01-Cover-Page/IST-CMYK.pdf}
 \hfill
-\includegraphics[height=3.00cm]{example-image-a} % Logo of external university, if applicable
+\includegraphics[height=2.50cm]{example-image-a} % Logo of external university, if applicable
 \end{figure}
 
 
 
 \begin{center}
 
-\FontLb{UNIVERSIDADE DE LISBOA} 
-\\ \FontLb{INSTITUTO SUPERIOR TÉCNICO}
-\\ \FontLb{[EXTERNAL UNIVERSITY NAME (IF APPLICABLE)]}
+\FontMb{UNIVERSIDADE DE LISBOA} 
+\\ \FontMb{INSTITUTO SUPERIOR TÉCNICO}
+\\ \FontMb{[EXTERNAL UNIVERSITY NAME (IF APPLICABLE)]}
 
 
 %----------------------------------
@@ -45,21 +45,35 @@
 % Author name
 {\FontMb \authorname} \\ 
 
-\vspace{1.00cm}
 
 %----------------------------------
 % Orientadores / Supervisors
+%\vspace{1.00cm}
+%{\FontSn %
+	%	\setlength{\tabcolsep}{3pt} % This may help control the spacing between table entries
+	%	\begin{tabular}{rl}
+		%		\supervisortitle:			
+		%		& \supervisor \\
+		%		% -------------------------
+		%		\cosupervisortitle:	
+		%		& \cosupervisorA   \\
+		%		& \cosupervisorB
+		%	\end{tabular} 
+	%}
+
+\vspace{0.50cm}
 {\FontSn %
 	\setlength{\tabcolsep}{3pt} % This may help control the spacing between table entries
-	\begin{tabular}{rl}
-		\supervisortitle:			
-		& \supervisor \\
+	\begin{tabular}{c}
+		\supervisortitle: \\
+		\supervisor \\
 		% -------------------------
-		\cosupervisortitle:	
-		& \cosupervisorA   \\
-		& \cosupervisorB
+		\cosupervisortitle:	\\
+		\cosupervisorA   \\
+		\cosupervisorB
 	\end{tabular} 
 }
+
 
 
 \vspace{0.50cm}
